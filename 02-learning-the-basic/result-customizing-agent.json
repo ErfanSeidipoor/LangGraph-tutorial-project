@@ -1,0 +1,331 @@
+{
+  "finalState": {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what is the weather in sf?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "f108ba95-b743-471f-b281-54e858f0d026"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "7b22567b-0098-46e1-a75c-eb3c11f5f958",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "tavily_search_results_json",
+              "args": {
+                "input": "sf weather"
+              },
+              "id": "7f7539cb-0ebc-4ea7-a923-2bfae01cedc5",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:03:47.524324Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 889098208,
+            "load_duration": 34515417,
+            "prompt_eval_count": 188,
+            "prompt_eval_duration": 474000000,
+            "eval_count": 18,
+            "eval_duration": 379000000
+          },
+          "usage_metadata": {
+            "input_tokens": 188,
+            "output_tokens": 18,
+            "total_tokens": 206
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "[{\"title\":\"Weather in San Francisco\",\"url\":\"https://www.weatherapi.com/\",\"content\":\"{'location': {'name': 'San Francisco', 'region': 'California', 'country': 'United States of America', 'lat': 37.775, 'lon': -122.4183, 'tz_id': 'America/Los_Angeles', 'localtime_epoch': 1738836143, 'localtime': '2025-02-06 02:02'}, 'current': {'last_updated_epoch': 1738836000, 'last_updated': '2025-02-06 02:00', 'temp_c': 7.2, 'temp_f': 45.0, 'is_day': 0, 'condition': {'text': 'Partly cloudy', 'icon': '//cdn.weatherapi.com/weather/64x64/night/116.png', 'code': 1003}, 'wind_mph': 6.0, 'wind_kph': 9.7, 'wind_degree': 72, 'wind_dir': 'ENE', 'pressure_mb': 1015.0, 'pressure_in': 29.96, 'precip_mm': 0.0, 'precip_in': 0.0, 'humidity': 71, 'cloud': 75, 'feelslike_c': 5.3, 'feelslike_f': 41.6, 'windchill_c': 6.1, 'windchill_f': 43.0, 'heatindex_c': 7.6, 'heatindex_f': 45.6, 'dewpoint_c': 6.8, 'dewpoint_f': 44.2, 'vis_km': 16.0, 'vis_miles': 9.0, 'uv': 0.0, 'gust_mph': 9.6, 'gust_kph': 15.5}}\",\"score\":0.9966792,\"raw_content\":null},{\"title\":\"Thursday, February 6, 2025. San Francisco, CA - Weather Forecast\",\"url\":\"https://weathershogun.com/weather/usa/ca/san-francisco/480/february/2025-02-06\",\"content\":\"San Francisco, California weather forecast for Thursday, February 6, 2025. Get the latest on temperature, precipitation, wind speed, and UV. ... °F °C Today Tomorrow Hourly 7 days 30 days January San Francisco, California Weather: Thursday, February 6, 2025. Sunny weather, clear skies and sunny weather. Day 55\",\"score\":0.93265617,\"raw_content\":null},{\"title\":\"Weather in San Francisco in February 2025\",\"url\":\"https://world-weather.info/forecast/usa/san_francisco/february-2025/\",\"content\":\"Weather in San Francisco in February 2025 (California) - Detailed Weather Forecast for a Month Weather World Weather in San Francisco Weather in San Francisco in February 2025 San Francisco Weather Forecast for February 2025, is based on previous years' statistical data. +59°+50° +59°+52° +59°+50° +61°+52° +59°+50° +61°+50° +61°+52° +63°+52° +61°+52° +61°+50° +61°+50° +61°+50° +59°+50° +59°+50° +61°+50° +61°+52° +59°+50° +59°+48° +57°+48° +59°+50° +59°+48° +59°+50° +57°+46° +61°+50° +61°+50° +59°+50° +59°+48° +59°+50° Extended weather forecast in San Francisco HourlyWeek10-Day14-Day30-DayYear Weather in large and nearby cities Weather in Washington, D.C.+41° Sacramento+55° Pleasanton+55° Redwood City+55° San Leandro+55° San Mateo+54° San Rafael+52° San Ramon+52° South San Francisco+54° Vallejo+50° Palo Alto+55° Pacifica+55° Berkeley+54° Castro Valley+55° Concord+52° Daly City+54° Noverd+52° Sign Hill+54° world's temperature today day day Temperature units\",\"score\":0.6884899,\"raw_content\":null}]",
+          "tool_call_id": "7f7539cb-0ebc-4ea7-a923-2bfae01cedc5",
+          "name": "tavily_search_results_json",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "1e126567-8355-4221-b2e8-4692a8dda807"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "e76c5126-4cab-4efe-aa8a-c03a355e2f92",
+          "content": "The current weather in San Francisco is partly cloudy with a temperature of 7.2°C (45.0°F). The wind speed is 6.0 mph (9.7 km/h) from the east, and the pressure is 1015.0 mbar. There is no precipitation expected today.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:03:54.756507Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 4149575791,
+            "load_duration": 40209083,
+            "prompt_eval_count": 1046,
+            "prompt_eval_duration": 2466000000,
+            "eval_count": 64,
+            "eval_duration": 1636000000
+          },
+          "usage_metadata": {
+            "input_tokens": 1046,
+            "output_tokens": 64,
+            "total_tokens": 1110
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      }
+    ]
+  },
+  "nextState": {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what is the weather in sf?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "f108ba95-b743-471f-b281-54e858f0d026"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "7b22567b-0098-46e1-a75c-eb3c11f5f958",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "tavily_search_results_json",
+              "args": {
+                "input": "sf weather"
+              },
+              "id": "7f7539cb-0ebc-4ea7-a923-2bfae01cedc5",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:03:47.524324Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 889098208,
+            "load_duration": 34515417,
+            "prompt_eval_count": 188,
+            "prompt_eval_duration": 474000000,
+            "eval_count": 18,
+            "eval_duration": 379000000
+          },
+          "usage_metadata": {
+            "input_tokens": 188,
+            "output_tokens": 18,
+            "total_tokens": 206
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "[{\"title\":\"Weather in San Francisco\",\"url\":\"https://www.weatherapi.com/\",\"content\":\"{'location': {'name': 'San Francisco', 'region': 'California', 'country': 'United States of America', 'lat': 37.775, 'lon': -122.4183, 'tz_id': 'America/Los_Angeles', 'localtime_epoch': 1738836143, 'localtime': '2025-02-06 02:02'}, 'current': {'last_updated_epoch': 1738836000, 'last_updated': '2025-02-06 02:00', 'temp_c': 7.2, 'temp_f': 45.0, 'is_day': 0, 'condition': {'text': 'Partly cloudy', 'icon': '//cdn.weatherapi.com/weather/64x64/night/116.png', 'code': 1003}, 'wind_mph': 6.0, 'wind_kph': 9.7, 'wind_degree': 72, 'wind_dir': 'ENE', 'pressure_mb': 1015.0, 'pressure_in': 29.96, 'precip_mm': 0.0, 'precip_in': 0.0, 'humidity': 71, 'cloud': 75, 'feelslike_c': 5.3, 'feelslike_f': 41.6, 'windchill_c': 6.1, 'windchill_f': 43.0, 'heatindex_c': 7.6, 'heatindex_f': 45.6, 'dewpoint_c': 6.8, 'dewpoint_f': 44.2, 'vis_km': 16.0, 'vis_miles': 9.0, 'uv': 0.0, 'gust_mph': 9.6, 'gust_kph': 15.5}}\",\"score\":0.9966792,\"raw_content\":null},{\"title\":\"Thursday, February 6, 2025. San Francisco, CA - Weather Forecast\",\"url\":\"https://weathershogun.com/weather/usa/ca/san-francisco/480/february/2025-02-06\",\"content\":\"San Francisco, California weather forecast for Thursday, February 6, 2025. Get the latest on temperature, precipitation, wind speed, and UV. ... °F °C Today Tomorrow Hourly 7 days 30 days January San Francisco, California Weather: Thursday, February 6, 2025. Sunny weather, clear skies and sunny weather. Day 55\",\"score\":0.93265617,\"raw_content\":null},{\"title\":\"Weather in San Francisco in February 2025\",\"url\":\"https://world-weather.info/forecast/usa/san_francisco/february-2025/\",\"content\":\"Weather in San Francisco in February 2025 (California) - Detailed Weather Forecast for a Month Weather World Weather in San Francisco Weather in San Francisco in February 2025 San Francisco Weather Forecast for February 2025, is based on previous years' statistical data. +59°+50° +59°+52° +59°+50° +61°+52° +59°+50° +61°+50° +61°+52° +63°+52° +61°+52° +61°+50° +61°+50° +61°+50° +59°+50° +59°+50° +61°+50° +61°+52° +59°+50° +59°+48° +57°+48° +59°+50° +59°+48° +59°+50° +57°+46° +61°+50° +61°+50° +59°+50° +59°+48° +59°+50° Extended weather forecast in San Francisco HourlyWeek10-Day14-Day30-DayYear Weather in large and nearby cities Weather in Washington, D.C.+41° Sacramento+55° Pleasanton+55° Redwood City+55° San Leandro+55° San Mateo+54° San Rafael+52° San Ramon+52° South San Francisco+54° Vallejo+50° Palo Alto+55° Pacifica+55° Berkeley+54° Castro Valley+55° Concord+52° Daly City+54° Noverd+52° Sign Hill+54° world's temperature today day day Temperature units\",\"score\":0.6884899,\"raw_content\":null}]",
+          "tool_call_id": "7f7539cb-0ebc-4ea7-a923-2bfae01cedc5",
+          "name": "tavily_search_results_json",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "1e126567-8355-4221-b2e8-4692a8dda807"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "e76c5126-4cab-4efe-aa8a-c03a355e2f92",
+          "content": "The current weather in San Francisco is partly cloudy with a temperature of 7.2°C (45.0°F). The wind speed is 6.0 mph (9.7 km/h) from the east, and the pressure is 1015.0 mbar. There is no precipitation expected today.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:03:54.756507Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 4149575791,
+            "load_duration": 40209083,
+            "prompt_eval_count": 1046,
+            "prompt_eval_duration": 2466000000,
+            "eval_count": 64,
+            "eval_duration": 1636000000
+          },
+          "usage_metadata": {
+            "input_tokens": 1046,
+            "output_tokens": 64,
+            "total_tokens": 1110
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what about ny",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "9cb76fb0-a9f5-44cf-b841-44a8aa58aa3a"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "0abcf41a-aec9-40d9-9844-a55912fa88e2",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "tavily_search_results_json",
+              "args": {
+                "input": "ny weather"
+              },
+              "id": "9ac598b8-abec-452d-be0d-f71ad267e1d0",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:03:55.743419Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 976944458,
+            "load_duration": 15719333,
+            "prompt_eval_count": 1246,
+            "prompt_eval_duration": 408000000,
+            "eval_count": 22,
+            "eval_duration": 548000000
+          },
+          "usage_metadata": {
+            "input_tokens": 1246,
+            "output_tokens": 22,
+            "total_tokens": 1268
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "[{\"title\":\"Weather in New York\",\"url\":\"https://www.weatherapi.com/\",\"content\":\"{'location': {'name': 'New York', 'region': 'New York', 'country': 'United States of America', 'lat': 40.7142, 'lon': -74.0064, 'tz_id': 'America/New_York', 'localtime_epoch': 1738836181, 'localtime': '2025-02-06 05:03'}, 'current': {'last_updated_epoch': 1738836000, 'last_updated': '2025-02-06 05:00', 'temp_c': -1.1, 'temp_f': 30.0, 'is_day': 0, 'condition': {'text': 'Light snow', 'icon': '//cdn.weatherapi.com/weather/64x64/night/326.png', 'code': 1213}, 'wind_mph': 8.9, 'wind_kph': 14.4, 'wind_degree': 150, 'wind_dir': 'SSE', 'pressure_mb': 1024.0, 'pressure_in': 30.25, 'precip_mm': 0.0, 'precip_in': 0.0, 'humidity': 78, 'cloud': 100, 'feelslike_c': -5.7, 'feelslike_f': 21.8, 'windchill_c': -5.3, 'windchill_f': 22.5, 'heatindex_c': -1.2, 'heatindex_f': 29.9, 'dewpoint_c': -2.7, 'dewpoint_f': 27.2, 'vis_km': 3.2, 'vis_miles': 1.0, 'uv': 0.0, 'gust_mph': 12.1, 'gust_kph': 19.5}}\",\"score\":0.9460611,\"raw_content\":null},{\"title\":\"New York City, NY Weather Forecast June 2025: Daily Highs/Lows & Rain ...\",\"url\":\"https://www.weathertab.com/en/c/o/06/united-states/new-york/new-york-city/\",\"content\":\"Explore comprehensive June 2025 weather forecasts for New York City, including daily high and low temperatures, precipitation risks, and monthly temperature trends. Featuring detailed day-by-day forecasts, dynamic graphs of daily rain probabilities, and temperature trends to help you plan ahead.\",\"score\":0.8488849,\"raw_content\":null},{\"title\":\"New York City, NY Weather Forecast Jan-Jun 2025 | Detailed Outlook\",\"url\":\"https://www.weathertab.com/en/c/united-states/new-york/new-york-city/\",\"content\":\"This six-month overview for New York City from January to June 2025 provides quick planning insights. Use daily or detailed buttons to view daily weather forecasts for a specific month, including rain risk and temperature projections. Our advanced weather model enhances forecast accuracy, offering detailed daily insights on temperature and\",\"score\":0.7135319,\"raw_content\":null}]",
+          "tool_call_id": "9ac598b8-abec-452d-be0d-f71ad267e1d0",
+          "name": "tavily_search_results_json",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "9a3efe53-34e9-40b3-b1e0-816e63979144"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "a864ac86-45e6-45bb-b879-d7f160b02a28",
+          "content": "The current weather in New York is light snow with a temperature of -1.1°C (30.0°F). The wind speed is 8.9 mph (14.4 km/h) from the southeast, and the pressure is 1024.0 mbar. There is no precipitation expected today.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-06T10:04:02.511357Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 3679082208,
+            "load_duration": 41275333,
+            "prompt_eval_count": 1792,
+            "prompt_eval_duration": 1855000000,
+            "eval_count": 64,
+            "eval_duration": 1771000000
+          },
+          "usage_metadata": {
+            "input_tokens": 1792,
+            "output_tokens": 64,
+            "total_tokens": 1856
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      }
+    ]
+  }
+}

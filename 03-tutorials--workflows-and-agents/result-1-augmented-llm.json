@@ -1,0 +1,48 @@
+{
+  "output": {
+    "justification": "none",
+    "searchQuery": "calcium CT score and high cholesterol relationship"
+  },
+  "message": {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "multiply",
+          "args": {
+            "a": "2",
+            "b": "3"
+          },
+          "id": "7a66cf2f-add7-447c-bcc6-5775085f4c0f",
+          "type": "tool_call"
+        }
+      ],
+      "response_metadata": {
+        "model": "llama3.2",
+        "created_at": "2025-02-06T15:13:10.196198Z",
+        "done_reason": "stop",
+        "done": true,
+        "total_duration": 633352584,
+        "load_duration": 15431167,
+        "prompt_eval_count": 175,
+        "prompt_eval_duration": 158000000,
+        "eval_count": 22,
+        "eval_duration": 458000000
+      },
+      "usage_metadata": {
+        "input_tokens": 175,
+        "output_tokens": 22,
+        "total_tokens": 197
+      },
+      "invalid_tool_calls": [],
+      "additional_kwargs": {}
+    }
+  }
+}

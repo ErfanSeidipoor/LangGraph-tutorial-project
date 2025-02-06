@@ -1,0 +1,331 @@
+{
+  "result": {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what is the weather in SF? temperature?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "251b5ead-f09b-455a-9759-0038144fb02c"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "8e7f209e-82fd-4ac5-b414-c88ad39cb7c9",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "search",
+              "args": {
+                "query": "San Francisco weather temperature"
+              },
+              "id": "d24e8767-859b-456f-b69b-4809f54cd52a",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:36.405135Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 2605577625,
+            "load_duration": 827536166,
+            "prompt_eval_count": 166,
+            "prompt_eval_duration": 1380000000,
+            "eval_count": 19,
+            "eval_duration": 395000000
+          },
+          "usage_metadata": {
+            "input_tokens": 166,
+            "output_tokens": 19,
+            "total_tokens": 185
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 60 degrees and foggy.",
+          "tool_call_id": "d24e8767-859b-456f-b69b-4809f54cd52a",
+          "name": "search",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "dec4ec5f-df36-46a9-9630-9ce10a91de93"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "e344c597-aa52-4b6a-995c-73845b116cdc",
+          "content": "Based on the current weather conditions in San Francisco, the temperature is around 60°F (15°C) with a layer of fog covering the city.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:37.597361Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 1178456625,
+            "load_duration": 15745375,
+            "prompt_eval_count": 86,
+            "prompt_eval_duration": 152000000,
+            "eval_count": 31,
+            "eval_duration": 599000000
+          },
+          "usage_metadata": {
+            "input_tokens": 86,
+            "output_tokens": 31,
+            "total_tokens": 117
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      }
+    ]
+  },
+  "followup": {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what is the weather in SF? temperature?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "251b5ead-f09b-455a-9759-0038144fb02c"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "8e7f209e-82fd-4ac5-b414-c88ad39cb7c9",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "search",
+              "args": {
+                "query": "San Francisco weather temperature"
+              },
+              "id": "d24e8767-859b-456f-b69b-4809f54cd52a",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:36.405135Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 2605577625,
+            "load_duration": 827536166,
+            "prompt_eval_count": 166,
+            "prompt_eval_duration": 1380000000,
+            "eval_count": 19,
+            "eval_duration": 395000000
+          },
+          "usage_metadata": {
+            "input_tokens": 166,
+            "output_tokens": 19,
+            "total_tokens": 185
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 60 degrees and foggy.",
+          "tool_call_id": "d24e8767-859b-456f-b69b-4809f54cd52a",
+          "name": "search",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "dec4ec5f-df36-46a9-9630-9ce10a91de93"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "e344c597-aa52-4b6a-995c-73845b116cdc",
+          "content": "Based on the current weather conditions in San Francisco, the temperature is around 60°F (15°C) with a layer of fog covering the city.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:37.597361Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 1178456625,
+            "load_duration": 15745375,
+            "prompt_eval_count": 86,
+            "prompt_eval_duration": 152000000,
+            "eval_count": 31,
+            "eval_duration": 599000000
+          },
+          "usage_metadata": {
+            "input_tokens": 86,
+            "output_tokens": 31,
+            "total_tokens": 117
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what about ny",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "1b643035-8e03-490f-9a5b-ee62850423e1"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "71ed23cb-be7c-4bde-8fb5-7051dc83c58a",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "search",
+              "args": {
+                "query": "New York weather"
+              },
+              "id": "ecbcc703-5b52-49ac-987c-66721c8e942b",
+              "type": "tool_call"
+            }
+          ],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:38.272125Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 635354958,
+            "load_duration": 15255292,
+            "prompt_eval_count": 229,
+            "prompt_eval_duration": 270000000,
+            "eval_count": 18,
+            "eval_duration": 347000000
+          },
+          "usage_metadata": {
+            "input_tokens": 229,
+            "output_tokens": 18,
+            "total_tokens": 247
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 90 degrees and sunny.",
+          "tool_call_id": "ecbcc703-5b52-49ac-987c-66721c8e942b",
+          "name": "search",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "3fc8f79c-a374-4523-b7c9-ccfe82facb2d"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "id": "22792523-2fd4-4f0e-9ba0-081f1566bda3",
+          "content": "Based on the current weather conditions in New York, the temperature is around 90°F (32°C) with plenty of sunshine.",
+          "tool_calls": [],
+          "response_metadata": {
+            "model": "llama3.2",
+            "created_at": "2025-02-05T07:57:38.917637Z",
+            "done_reason": "stop",
+            "done": true,
+            "total_duration": 630359834,
+            "load_duration": 15808584,
+            "prompt_eval_count": 148,
+            "prompt_eval_duration": 91000000,
+            "eval_count": 27,
+            "eval_duration": 521000000
+          },
+          "usage_metadata": {
+            "input_tokens": 148,
+            "output_tokens": 27,
+            "total_tokens": 175
+          },
+          "invalid_tool_calls": [],
+          "additional_kwargs": {}
+        }
+      }
+    ]
+  }
+}
