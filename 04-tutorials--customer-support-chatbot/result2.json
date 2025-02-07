@@ -1,0 +1,138 @@
+{
+  "currentState": {
+    "values": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "I've changed my mind and I want a refund for order #182818!",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "99a8945f-764d-4319-917f-81017d3d4e62"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "id": "b8498318-c5d3-47ec-86f5-8be8e6399b08",
+            "content": "I'd be happy to help you with your request. Can you please confirm that you're the original purchaser of order #182818? And would you like me to assist you with the return process or get someone from our billing team to help you with the refund?",
+            "tool_calls": [],
+            "response_metadata": {
+              "model": "llama3.2",
+              "created_at": "2025-02-07T15:23:09.047047Z",
+              "done_reason": "stop",
+              "done": true,
+              "total_duration": 1811588875,
+              "load_duration": 35585167,
+              "prompt_eval_count": 133,
+              "prompt_eval_duration": 447000000,
+              "eval_count": 54,
+              "eval_duration": 1327000000
+            },
+            "usage_metadata": {
+              "input_tokens": 133,
+              "output_tokens": 54,
+              "total_tokens": 187
+            },
+            "invalid_tool_calls": [],
+            "additional_kwargs": {}
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "id": "dba6dd94-2fb2-4739-b1b2-31610e47978e",
+            "content": "I'd be happy to assist you with a refund. To process the refund, I'll need to check on some details. Can you please confirm that you would like a full or partial refund? Additionally, is your order eligible for a refund due to a defect or change of heart?",
+            "tool_calls": [],
+            "response_metadata": {
+              "model": "llama3.2",
+              "created_at": "2025-02-07T15:23:12.316265Z",
+              "done_reason": "stop",
+              "done": true,
+              "total_duration": 1946036042,
+              "load_duration": 25591500,
+              "prompt_eval_count": 156,
+              "prompt_eval_duration": 467000000,
+              "eval_count": 58,
+              "eval_duration": 1452000000
+            },
+            "usage_metadata": {
+              "input_tokens": 156,
+              "output_tokens": 58,
+              "total_tokens": 214
+            },
+            "invalid_tool_calls": [],
+            "additional_kwargs": {}
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "Refund processed!",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "2acaf6c6-072e-4a08-9860-99c418f61e4c"
+          }
+        }
+      ],
+      "nextRepresentative": "REFUND",
+      "refundAuthorized": true
+    },
+    "next": [],
+    "tasks": [],
+    "metadata": {
+      "source": "loop",
+      "writes": {
+        "handleRefundNode": {
+          "messages": {
+            "role": "assistant",
+            "content": "Refund processed!"
+          }
+        }
+      },
+      "step": 4,
+      "parents": {}
+    },
+    "config": {
+      "configurable": {
+        "thread_id": "refund_testing_id",
+        "checkpoint_id": "1efe5677-262b-6b40-8004-4cabe74a7183",
+        "checkpoint_ns": ""
+      }
+    },
+    "createdAt": "2025-02-07T15:23:13.524Z",
+    "parentConfig": {
+      "configurable": {
+        "thread_id": "refund_testing_id",
+        "checkpoint_ns": "",
+        "checkpoint_id": "1efe5677-2626-6d20-8003-f5d19707fbf5"
+      }
+    }
+  }
+}

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "index": "node -r ts-node/register --env-file=.env src/index.ts",
     "augmented-llm": "node -r ts-node/register --env-file=.env src/1-augmented-llm.ts",
     "prompt-chaining": "node -r ts-node/register --env-file=.env src/2-prompt-chaining.ts",
     "prompt-chaining-functional": "node -r ts-node/register --env-file=.env src/3-prompt-chaining-functional",
