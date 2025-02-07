@@ -1,5 +1,5 @@
 {
-  "name": "langgraph--02-learning-the-basic",
+  "name": "langgraph--03-tutorials--workflows-and-agents",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,12 @@
     "index": "node -r ts-node/register --env-file=.env src/index.ts",
     "augmented-llm": "node -r ts-node/register --env-file=.env src/1-augmented-llm.ts",
     "prompt-chaining": "node -r ts-node/register --env-file=.env src/2-prompt-chaining.ts",
-    "prompt-chaining-functional": "node -r ts-node/register --env-file=.env src/3-prompt-chaining-functional"
+    "prompt-chaining-functional": "node -r ts-node/register --env-file=.env src/3-prompt-chaining-functional",
+    "parallelization": "node -r ts-node/register --env-file=.env src/4-parallelization",
+    "routing": "node -r ts-node/register --env-file=.env src/5-routing",
+    "orchestrator-worker": "node -r ts-node/register --env-file=.env src/6-orchestrator-worker",
+    "evaluator-optimizer": "node -r ts-node/register --env-file=.env src/7-evaluator-optimizer",
+    "agent": "node -r ts-node/register --env-file=.env src/8-agent"
   },
   "keywords": [],
   "author": "",

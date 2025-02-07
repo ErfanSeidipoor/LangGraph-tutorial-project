@@ -1,0 +1,8 @@
+{
+  "state": {
+    "joke": "Why did the cat join a band?\n\nBecause it wanted to be the purr-cussionist! (get it?)",
+    "topic": "Cats",
+    "feedback": "If the joke is not funny, provide feedback on how to improve it. The punchline could be improved by adding more wordplay or a clearer connection to the setup.",
+    "funnyOrNot": "funny"
+  }
+}

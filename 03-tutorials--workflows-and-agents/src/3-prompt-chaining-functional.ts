@@ -1,6 +1,5 @@
 import { task, entrypoint } from "@langchain/langgraph";
 import { ChatOllama } from "@langchain/ollama";
-import * as fs from "fs";
 
 (async () => {
   const llm = new ChatOllama({
@@ -35,10 +34,12 @@ import * as fs from "fs";
 
   const workflow = entrypoint("jokeMaker", async (topic: string) => {
     const originalJoke = await generateJoke(topic);
-    if ((await checkPunchline(originalJoke as string)) === "Pass") {
+
+    if ((await checkPunchline(originalJoke as string)) !== "Pass") {
       return originalJoke;
     }
     const improvedJoke = await improveJoke(originalJoke as string);
+
     const polishedJoke = await polishJoke(improvedJoke as string);
 
     return polishedJoke;
@@ -51,26 +52,4 @@ import * as fs from "fs";
   for await (const step of stream) {
     console.log(step);
   }
-
-  // const chain = new StateGraph(StateAnnotation)
-  //   .addNode("generateJoke", generateJoke)
-  //   .addNode("improveJoke", improveJoke)
-  //   .addNode("polishJoke", polishJoke)
-  //   .addEdge("__start__", "generateJoke")
-  //   .addConditionalEdges("generateJoke", checkPunchline, {
-  //     Pass: "improveJoke",
-  //     Fail: "__end__",
-  //   })
-  //   .addEdge("improveJoke", "polishJoke")
-  //   .addEdge("polishJoke", "__end__")
-  //   .compile();
-
-  // const state = await chain.invoke({ topic: "cats" });
-
-  // // prettier-ignore
-  // const buffer = (await (await chain.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
-  // fs.writeFileSync("./graph-2-prompt-chaining.png", Buffer.from(await buffer));
-
-  // // prettier-ignore
-  // fs.writeFileSync("result-2-prompt-chaining.json",JSON.stringify({ state }, null, 2),"utf8");
 })();
