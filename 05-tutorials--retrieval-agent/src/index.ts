@@ -7,26 +7,21 @@ import { Annotation, END, START, StateGraph } from "@langchain/langgraph";
 import { BaseMessage, AIMessage, HumanMessage } from "@langchain/core/messages";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { pull } from "langchain/hub";
-
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 
 import * as fs from "fs";
 import { z } from "zod";
-import { ChatOpenAI } from "@langchain/openai";
 
 (async () => {
+  const WORKFLOW: any[] = [];
   const urls = [
     "https://lilianweng.github.io/posts/2023-06-23-agent/",
-    "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
-    "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
+    // "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
+    // "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
   ];
 
   const docs = await Promise.all(
-    urls.map((url) =>
-      new CheerioWebBaseLoader(
-        "https://lilianweng.github.io/posts/2023-06-23-agent/"
-      ).load()
-    )
+    urls.map((url) => new CheerioWebBaseLoader(url).load())
   );
 
   const docsList = docs.flat();
@@ -50,8 +45,8 @@ import { ChatOpenAI } from "@langchain/openai";
     description:
       "Search and return information about Lilian Weng blog posts on LLM agents, prompt engineering, and adversarial attacks on LLMs.",
   });
-
   const tools = [retrieverTool];
+  /* ---------------------------------- GRAPH --------------------------------- */
 
   const GraphState = Annotation.Root({
     messages: Annotation<BaseMessage[]>({
@@ -60,32 +55,77 @@ import { ChatOpenAI } from "@langchain/openai";
     }),
   });
 
-  const toolNode = new ToolNode<typeof GraphState.State>(tools);
+  /* -------------------------------------------------------------------------- */
+  /*                                    Nodes                                   */
+  /* -------------------------------------------------------------------------- */
+
+  async function agentNode(
+    state: typeof GraphState.State
+  ): Promise<Partial<typeof GraphState.State>> {
+    const { messages } = state;
+    WORKFLOW.push("start > ---AGENT NODE---");
+    WORKFLOW.push(messages);
+
+    // Find the AIMessage which contains the `give_relevance_score` tool call,
+    // and remove it if it exists. This is because the agent does not need to know
+    // the relevance score.
+    const filteredMessages = messages.filter((message) => {
+      if (
+        "tool_calls" in message &&
+        Array.isArray(message.tool_calls) &&
+        message.tool_calls.length > 0
+      ) {
+        return message.tool_calls[0].name !== "grade_relevance_score";
+      }
+      return true;
+    });
+
+    WORKFLOW.push(filteredMessages);
+
+    const model = new ChatOllama({
+      model: "llama3.2",
+      temperature: 0,
+      streaming: true,
+    }).bindTools(tools);
+
+    const response = await model.invoke(filteredMessages);
+    response.tool_calls;
+
+    WORKFLOW.push(response);
+
+    return {
+      messages: [response],
+    };
+  }
 
   function shouldRetrieveConditionalEdge(
     state: typeof GraphState.State
   ): string {
-    console.log("---DECIDE TO RETRIEVE---");
+    WORKFLOW.push("start > ---DECIDE TO RETRIEVE---");
+
     const { messages } = state;
     const lastMessage = messages[messages.length - 1];
+
+    WORKFLOW.push(messages);
 
     if (
       "tool_calls" in lastMessage &&
       Array.isArray(lastMessage.tool_calls) &&
       lastMessage.tool_calls.length
     ) {
-      console.log("---DECISION: RETRIEVE---");
-      return "retrieveNode";
+      return "retrieverNode";
     }
-
-    return END;
+    return "__end__";
   }
+
+  const retrieverNode = new ToolNode<typeof GraphState.State>(tools);
 
   async function gradeDocumentsNode(
     state: typeof GraphState.State
   ): Promise<Partial<typeof GraphState.State>> {
-    console.log("---GET RELEVANCE---");
+    WORKFLOW.push("---GET RELEVANCE---");
     const { messages } = state;
+    WORKFLOW.push(messages);
 
     const tool = {
       name: "grade_relevance_score",
@@ -110,11 +150,11 @@ import { ChatOpenAI } from "@langchain/openai";
       `
     );
 
-    const model = new ChatOpenAI({
-      model: "gpt-4o",
+    const model = new ChatOllama({
+      model: "llama3.2",
       temperature: 0,
     }).bindTools([tool], {
-      tool_choice: tool.name,
+      // tool_choice: tool.name,
     });
 
     const chain = prompt.pipe(model);
@@ -126,7 +166,7 @@ import { ChatOpenAI } from "@langchain/openai";
       context: lastMessage.content,
     });
 
-    console.log({ score });
+    WORKFLOW.push({ score });
 
     return {
       messages: [score],
@@ -136,9 +176,10 @@ import { ChatOpenAI } from "@langchain/openai";
   function checkRelevanceConditionalEdge(
     state: typeof GraphState.State
   ): string {
-    console.log("---CHECK RELEVANCE---");
-
+    WORKFLOW.push("---CHECK RELEVANCE---");
     const { messages } = state;
+    WORKFLOW.push(messages);
+
     const lastMessage = messages[messages.length - 1];
     if (!("tool_calls" in lastMessage)) {
       throw new Error(
@@ -152,51 +193,21 @@ import { ChatOpenAI } from "@langchain/openai";
     }
 
     if (toolCalls[0].args.binaryScore === "yes") {
-      console.log("---DECISION: DOCS RELEVANT---");
+      WORKFLOW.push("---DECISION: DOCS RELEVANT---");
       return "yes";
     }
-    console.log("---DECISION: DOCS NOT RELEVANT---");
+    WORKFLOW.push("---DECISION: DOCS NOT RELEVANT---");
     return "no";
-  }
-
-  async function agentNode(
-    state: typeof GraphState.State
-  ): Promise<Partial<typeof GraphState.State>> {
-    const { messages } = state;
-
-    // Find the AIMessage which contains the `give_relevance_score` tool call,
-    // and remove it if it exists. This is because the agent does not need to know
-    // the relevance score.
-    const filteredMessages = messages.filter((message) => {
-      if (
-        "tool_calls" in message &&
-        Array.isArray(message.tool_calls) &&
-        message.tool_calls.length > 0
-      ) {
-        return message.tool_calls[0].name !== "grade_relevance_score";
-      }
-      return true;
-    });
-
-    const model = new ChatOllama({
-      model: "llama3.2",
-      temperature: 0,
-      streaming: true,
-    }).bindTools(tools);
-
-    const response = await model.invoke(filteredMessages);
-
-    return {
-      messages: [response],
-    };
   }
 
   async function rewriteNode(
     state: typeof GraphState.State
   ): Promise<Partial<typeof GraphState.State>> {
-    console.log("---TRANSFORM QUERY---");
+    WORKFLOW.push("---REWRITE---");
 
     const { messages } = state;
+    WORKFLOW.push(state.messages);
+
     const question = messages[0].content as string;
     const prompt = ChatPromptTemplate.fromTemplate(
       `Look at the input and try to reason about the underlying semantic intent / meaning. \n 
@@ -209,12 +220,15 @@ import { ChatOpenAI } from "@langchain/openai";
     );
 
     // Grader
-    const model = new ChatOpenAI({
-      model: "gpt-4o",
+    const model = new ChatOllama({
+      model: "llama3.2",
       temperature: 0,
       streaming: true,
     });
     const response = await prompt.pipe(model).invoke({ question });
+
+    WORKFLOW.push(response);
+
     return {
       messages: [response],
     };
@@ -223,9 +237,9 @@ import { ChatOpenAI } from "@langchain/openai";
   async function generateNode(
     state: typeof GraphState.State
   ): Promise<Partial<typeof GraphState.State>> {
-    console.log("---GENERATE---");
-
+    WORKFLOW.push("---GENERATE---");
     const { messages } = state;
+    WORKFLOW.push(messages);
     const question = messages[0].content as string;
     // Extract the most recent ToolMessage
     const lastToolMessage = messages
@@ -240,8 +254,8 @@ import { ChatOpenAI } from "@langchain/openai";
 
     const prompt = await pull<ChatPromptTemplate>("rlm/rag-prompt");
 
-    const llm = new ChatOpenAI({
-      model: "gpt-4o",
+    const llm = new ChatOllama({
+      model: "llama3.2",
       temperature: 0,
       streaming: true,
     });
@@ -253,6 +267,8 @@ import { ChatOpenAI } from "@langchain/openai";
       question,
     });
 
+    WORKFLOW.push(response);
+
     return {
       messages: [response],
     };
@@ -261,21 +277,21 @@ import { ChatOpenAI } from "@langchain/openai";
   const graph = new StateGraph(GraphState)
     // Define the nodes which we'll cycle between.
     .addNode("agentNode", agentNode)
-    .addNode("toolNode", toolNode)
+    .addNode("retrieverNode", retrieverNode)
     .addNode("gradeDocumentsNode", gradeDocumentsNode)
     .addNode("rewriteNode", rewriteNode)
     .addNode("generateNode", generateNode)
     .addEdge(START, "agentNode")
     .addConditionalEdges("agentNode", shouldRetrieveConditionalEdge, {
-      toolNode: "toolNode",
-      __end__: END,
+      retrieverNode: "retrieverNode",
+      __end__: "__end__",
     })
-    .addEdge("toolNode", "gradeDocumentsNode")
+    .addEdge("retrieverNode", "gradeDocumentsNode")
     .addConditionalEdges("gradeDocumentsNode", checkRelevanceConditionalEdge, {
       yes: "generateNode",
       no: "rewriteNode",
     })
-    .addEdge("generateNode", END)
+    .addEdge("generateNode", "__end__")
     .addEdge("rewriteNode", "agentNode")
     .compile();
 
@@ -312,4 +328,7 @@ import { ChatOpenAI } from "@langchain/openai";
   // prettier-ignore
   const buffer = (await (await graph.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
   fs.writeFileSync("./index.png", Buffer.from(await buffer));
+
+  // prettier-ignore
+  fs.writeFileSync("result.json",JSON.stringify(WORKFLOW, null, 2),"utf8");
 })();

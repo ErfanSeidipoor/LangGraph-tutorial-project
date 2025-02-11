@@ -1,0 +1,514 @@
+[
+  "start > ---AGENT NODE---",
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    }
+  ],
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    }
+  ],
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "retrieve_blog_posts",
+          "args": {
+            "query": "agent memory types according to Lilian Weng"
+          },
+          "id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+          "type": "tool_call"
+        }
+      ],
+      "response_metadata": {
+        "model": "llama3.2",
+        "created_at": "2025-02-10T09:08:03.404938Z",
+        "done_reason": "stop",
+        "done": true,
+        "total_duration": 3693622333,
+        "load_duration": 1090755292,
+        "prompt_eval_count": 198,
+        "prompt_eval_duration": 2001000000,
+        "eval_count": 26,
+        "eval_duration": 597000000
+      },
+      "usage_metadata": {
+        "input_tokens": 198,
+        "output_tokens": 26,
+        "total_tokens": 224
+      },
+      "invalid_tool_calls": [],
+      "additional_kwargs": {}
+    }
+  },
+  "start > ---DECIDE TO RETRIEVE---",
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "retrieve_blog_posts",
+            "args": {
+              "query": "agent memory types according to Lilian Weng"
+            },
+            "id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:03.404938Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 3693622333,
+          "load_duration": 1090755292,
+          "prompt_eval_count": 198,
+          "prompt_eval_duration": 2001000000,
+          "eval_count": 26,
+          "eval_duration": 597000000
+        },
+        "usage_metadata": {
+          "input_tokens": 198,
+          "output_tokens": 26,
+          "total_tokens": 224
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    }
+  ],
+  "---GET RELEVANCE---",
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "retrieve_blog_posts",
+            "args": {
+              "query": "agent memory types according to Lilian Weng"
+            },
+            "id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:03.404938Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 3693622333,
+          "load_duration": 1090755292,
+          "prompt_eval_count": 198,
+          "prompt_eval_duration": 2001000000,
+          "eval_count": 26,
+          "eval_duration": 597000000
+        },
+        "usage_metadata": {
+          "input_tokens": 198,
+          "output_tokens": 26,
+          "total_tokens": 224
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "ToolMessage"
+      ],
+      "kwargs": {
+        "content": "Agent System Overview\n                \n                    Component One: Planning\n                        \n                \n                    Task Decomposition\n                \n                    Self-Reflection\n                \n                \n                    Component Two: Memory\n                        \n                \n                    Types of Memory\n                \n                    Maximum Inner Product Search (MIPS)\n                \n                \n                    Component Three: Tool Use\n                \n                    Case Studies\n                        \n                \n                    Scientific Discovery Agent\n                \n                    Generative Agents Simulation\n                \n                    Proof-of-Concept Examples\n                \n                \n                    Challenges\n                \n                    Citation\n                \n                    References\n\nMemory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.\n\nEach element is an observation, an event directly provided by the agent.\n- Inter-agent communication can trigger new natural language statements.\n\n\nRetrieval model: surfaces the context to inform the agent’s behavior, according to relevance, recency and importance.\n\nRecency: recent events have higher scores\nImportance: distinguish mundane from core memories. Ask LM directly.\nRelevance: based on how related it is to the current situation / query.\n\n\nReflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)\n\nLLM Powered Autonomous Agents\n    \n    Date: June 23, 2023  |  Estimated Reading Time: 31 min  |  Author: Lilian Weng\n\n\n   \n    \n        \n            Table of Contents\n\nOr\n@article{weng2023agent,\n  title   = \"LLM-powered Autonomous Agents\",\n  author  = \"Weng, Lilian\",\n  journal = \"lilianweng.github.io\",\n  year    = \"2023\",\n  month   = \"Jun\",\n  url     = \"https://lilianweng.github.io/posts/2023-06-23-agent/\"\n}\nReferences#\n[1] Wei et al. “Chain of thought prompting elicits reasoning in large language models.” NeurIPS 2022\n[2] Yao et al. “Tree of Thoughts: Dliberate Problem Solving with Large Language Models.” arXiv preprint arXiv:2305.10601 (2023).\n[3] Liu et al. “Chain of Hindsight Aligns Language Models with Feedback\n“ arXiv preprint arXiv:2302.02676 (2023).\n[4] Liu et al. “LLM+P: Empowering Large Language Models with Optimal Planning Proficiency” arXiv preprint arXiv:2304.11477 (2023).\n[5] Yao et al. “ReAct: Synergizing reasoning and acting in language models.” ICLR 2023.\n[6] Google Blog. “Announcing ScaNN: Efficient Vector Similarity Search” July 28, 2020.\n[7] https://chat.openai.com/share/46ff149e-a4c7-4dd7-a800-fc4a642ea389",
+        "tool_call_id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+        "name": "retrieve_blog_posts",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    }
+  ],
+  {
+    "score": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "grade_relevance_score",
+            "args": {
+              "binaryScore": "yes"
+            },
+            "id": "5ed8bf46-7c3a-4503-a603-4c338803c0ae",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:05.990169Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 2413017041,
+          "load_duration": 18607625,
+          "prompt_eval_count": 893,
+          "prompt_eval_duration": 1910000000,
+          "eval_count": 20,
+          "eval_duration": 483000000
+        },
+        "usage_metadata": {
+          "input_tokens": 893,
+          "output_tokens": 20,
+          "total_tokens": 913
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    }
+  },
+  "---CHECK RELEVANCE---",
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "retrieve_blog_posts",
+            "args": {
+              "query": "agent memory types according to Lilian Weng"
+            },
+            "id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:03.404938Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 3693622333,
+          "load_duration": 1090755292,
+          "prompt_eval_count": 198,
+          "prompt_eval_duration": 2001000000,
+          "eval_count": 26,
+          "eval_duration": 597000000
+        },
+        "usage_metadata": {
+          "input_tokens": 198,
+          "output_tokens": 26,
+          "total_tokens": 224
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "ToolMessage"
+      ],
+      "kwargs": {
+        "content": "Agent System Overview\n                \n                    Component One: Planning\n                        \n                \n                    Task Decomposition\n                \n                    Self-Reflection\n                \n                \n                    Component Two: Memory\n                        \n                \n                    Types of Memory\n                \n                    Maximum Inner Product Search (MIPS)\n                \n                \n                    Component Three: Tool Use\n                \n                    Case Studies\n                        \n                \n                    Scientific Discovery Agent\n                \n                    Generative Agents Simulation\n                \n                    Proof-of-Concept Examples\n                \n                \n                    Challenges\n                \n                    Citation\n                \n                    References\n\nMemory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.\n\nEach element is an observation, an event directly provided by the agent.\n- Inter-agent communication can trigger new natural language statements.\n\n\nRetrieval model: surfaces the context to inform the agent’s behavior, according to relevance, recency and importance.\n\nRecency: recent events have higher scores\nImportance: distinguish mundane from core memories. Ask LM directly.\nRelevance: based on how related it is to the current situation / query.\n\n\nReflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)\n\nLLM Powered Autonomous Agents\n    \n    Date: June 23, 2023  |  Estimated Reading Time: 31 min  |  Author: Lilian Weng\n\n\n   \n    \n        \n            Table of Contents\n\nOr\n@article{weng2023agent,\n  title   = \"LLM-powered Autonomous Agents\",\n  author  = \"Weng, Lilian\",\n  journal = \"lilianweng.github.io\",\n  year    = \"2023\",\n  month   = \"Jun\",\n  url     = \"https://lilianweng.github.io/posts/2023-06-23-agent/\"\n}\nReferences#\n[1] Wei et al. “Chain of thought prompting elicits reasoning in large language models.” NeurIPS 2022\n[2] Yao et al. “Tree of Thoughts: Dliberate Problem Solving with Large Language Models.” arXiv preprint arXiv:2305.10601 (2023).\n[3] Liu et al. “Chain of Hindsight Aligns Language Models with Feedback\n“ arXiv preprint arXiv:2302.02676 (2023).\n[4] Liu et al. “LLM+P: Empowering Large Language Models with Optimal Planning Proficiency” arXiv preprint arXiv:2304.11477 (2023).\n[5] Yao et al. “ReAct: Synergizing reasoning and acting in language models.” ICLR 2023.\n[6] Google Blog. “Announcing ScaNN: Efficient Vector Similarity Search” July 28, 2020.\n[7] https://chat.openai.com/share/46ff149e-a4c7-4dd7-a800-fc4a642ea389",
+        "tool_call_id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+        "name": "retrieve_blog_posts",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "grade_relevance_score",
+            "args": {
+              "binaryScore": "yes"
+            },
+            "id": "5ed8bf46-7c3a-4503-a603-4c338803c0ae",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:05.990169Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 2413017041,
+          "load_duration": 18607625,
+          "prompt_eval_count": 893,
+          "prompt_eval_duration": 1910000000,
+          "eval_count": 20,
+          "eval_duration": 483000000
+        },
+        "usage_metadata": {
+          "input_tokens": 893,
+          "output_tokens": 20,
+          "total_tokens": 913
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    }
+  ],
+  "---DECISION: DOCS RELEVANT---",
+  "---GENERATE---",
+  [
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "HumanMessage"
+      ],
+      "kwargs": {
+        "content": "What are the types of agent memory based on Lilian Weng's blog post?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "retrieve_blog_posts",
+            "args": {
+              "query": "agent memory types according to Lilian Weng"
+            },
+            "id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:03.404938Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 3693622333,
+          "load_duration": 1090755292,
+          "prompt_eval_count": 198,
+          "prompt_eval_duration": 2001000000,
+          "eval_count": 26,
+          "eval_duration": 597000000
+        },
+        "usage_metadata": {
+          "input_tokens": 198,
+          "output_tokens": 26,
+          "total_tokens": 224
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "ToolMessage"
+      ],
+      "kwargs": {
+        "content": "Agent System Overview\n                \n                    Component One: Planning\n                        \n                \n                    Task Decomposition\n                \n                    Self-Reflection\n                \n                \n                    Component Two: Memory\n                        \n                \n                    Types of Memory\n                \n                    Maximum Inner Product Search (MIPS)\n                \n                \n                    Component Three: Tool Use\n                \n                    Case Studies\n                        \n                \n                    Scientific Discovery Agent\n                \n                    Generative Agents Simulation\n                \n                    Proof-of-Concept Examples\n                \n                \n                    Challenges\n                \n                    Citation\n                \n                    References\n\nMemory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.\n\nEach element is an observation, an event directly provided by the agent.\n- Inter-agent communication can trigger new natural language statements.\n\n\nRetrieval model: surfaces the context to inform the agent’s behavior, according to relevance, recency and importance.\n\nRecency: recent events have higher scores\nImportance: distinguish mundane from core memories. Ask LM directly.\nRelevance: based on how related it is to the current situation / query.\n\n\nReflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)\n\nLLM Powered Autonomous Agents\n    \n    Date: June 23, 2023  |  Estimated Reading Time: 31 min  |  Author: Lilian Weng\n\n\n   \n    \n        \n            Table of Contents\n\nOr\n@article{weng2023agent,\n  title   = \"LLM-powered Autonomous Agents\",\n  author  = \"Weng, Lilian\",\n  journal = \"lilianweng.github.io\",\n  year    = \"2023\",\n  month   = \"Jun\",\n  url     = \"https://lilianweng.github.io/posts/2023-06-23-agent/\"\n}\nReferences#\n[1] Wei et al. “Chain of thought prompting elicits reasoning in large language models.” NeurIPS 2022\n[2] Yao et al. “Tree of Thoughts: Dliberate Problem Solving with Large Language Models.” arXiv preprint arXiv:2305.10601 (2023).\n[3] Liu et al. “Chain of Hindsight Aligns Language Models with Feedback\n“ arXiv preprint arXiv:2302.02676 (2023).\n[4] Liu et al. “LLM+P: Empowering Large Language Models with Optimal Planning Proficiency” arXiv preprint arXiv:2304.11477 (2023).\n[5] Yao et al. “ReAct: Synergizing reasoning and acting in language models.” ICLR 2023.\n[6] Google Blog. “Announcing ScaNN: Efficient Vector Similarity Search” July 28, 2020.\n[7] https://chat.openai.com/share/46ff149e-a4c7-4dd7-a800-fc4a642ea389",
+        "tool_call_id": "d240969a-966f-4b3a-8d85-0c98a81c5ea4",
+        "name": "retrieve_blog_posts",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "grade_relevance_score",
+            "args": {
+              "binaryScore": "yes"
+            },
+            "id": "5ed8bf46-7c3a-4503-a603-4c338803c0ae",
+            "type": "tool_call"
+          }
+        ],
+        "response_metadata": {
+          "model": "llama3.2",
+          "created_at": "2025-02-10T09:08:05.990169Z",
+          "done_reason": "stop",
+          "done": true,
+          "total_duration": 2413017041,
+          "load_duration": 18607625,
+          "prompt_eval_count": 893,
+          "prompt_eval_duration": 1910000000,
+          "eval_count": 20,
+          "eval_duration": 483000000
+        },
+        "usage_metadata": {
+          "input_tokens": 893,
+          "output_tokens": 20,
+          "total_tokens": 913
+        },
+        "invalid_tool_calls": [],
+        "additional_kwargs": {}
+      }
+    }
+  ],
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "I don't know the specific types of agent memory mentioned in Lilian Weng's blog post. The context mentions \"Types of Memory\" under Component Two, but it doesn't provide further details on what those types are.",
+      "tool_calls": [],
+      "response_metadata": {
+        "model": "llama3.2",
+        "created_at": "2025-02-10T09:08:09.588554Z",
+        "done_reason": "stop",
+        "done": true,
+        "total_duration": 2491008000,
+        "load_duration": 37868875,
+        "prompt_eval_count": 704,
+        "prompt_eval_duration": 1452000000,
+        "eval_count": 46,
+        "eval_duration": 999000000
+      },
+      "usage_metadata": {
+        "input_tokens": 704,
+        "output_tokens": 46,
+        "total_tokens": 750
+      },
+      "invalid_tool_calls": [],
+      "additional_kwargs": {}
+    }
+  }
+]
