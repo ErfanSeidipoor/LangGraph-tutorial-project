@@ -1,0 +1,171 @@
+[
+  "node >> ---RETRIEVE---",
+  {
+    "documents": [
+      {
+        "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 201,
+              "to": 201
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 322,
+              "to": 322
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 335,
+              "to": 335
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 320,
+              "to": 320
+            }
+          }
+        }
+      }
+    ]
+  },
+  "node >> ---GRADE---",
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 201,
+            "to": 201
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 322,
+            "to": 322
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 335,
+            "to": 335
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 320,
+            "to": 320
+          }
+        }
+      }
+    }
+  },
+  "node >> ---DECIDE TO GENERATE---",
+  "node >> ",
+  {
+    "return": "generateNode"
+  },
+  "node >> ---GENERATE---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "template": "You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: {question} \nContext: {context} \nAnswer:",
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string"
+              }
+            }
+          }
+        }
+      ],
+      "input_variables": [
+        "question",
+        "context"
+      ]
+    }
+  },
+  "I don't know the specific details on how different types of agent memory work. However, I can provide a general overview: Agent memories include a Memory Stream (long-term database) and Reflection Mechanism (higher-level summaries of past events). These mechanisms enable the agent to learn from experience and adapt its behavior over time."
+]
