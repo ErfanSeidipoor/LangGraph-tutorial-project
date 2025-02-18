@@ -94,7 +94,7 @@ import { z } from "zod";
       z
         .object({
           binaryScore: z
-            .enum(["yes", "no"])
+            .enum(["no", "yes"])
             .describe("Relevance score 'yes' or 'no'"),
         })
         .describe(
@@ -106,15 +106,16 @@ import { z } from "zod";
     );
 
     const prompt = ChatPromptTemplate.fromTemplate(`
-      You are a grader assessing relevance of a retrieved document to a user question.
+      You are a strict grader assessing the relevance of a retrieved document to a user question.  You MUST answer with only "yes" or "no" – no other explanations or text are permitted.
+
       Here is the retrieved document:
+
 
       {context}
 
       Here is the user question: {question}
 
-      If the document contains keyword(s) or semantic meaning related to the user question, grade it as relevant.
-      Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question.
+      A document is ONLY relevant if it contains keywords DIRECTLY from the user question OR expresses the EXACT SAME semantic meaning.  Synonyms, related concepts, or tangential information are NOT sufficient for relevance.  If the document meets this strict criterion, answer "yes". Otherwise, answer "no".
     `);
 
     const chain = prompt.pipe(llmWithTool);
@@ -125,6 +126,8 @@ import { z } from "zod";
         context: document.pageContent,
         question,
       });
+
+      console.log({ grade, context: document.pageContent, question });
 
       if (grade.binaryScore === "yes") {
         WORKFLOW.push("---GRADE: DOCUMENT RELEVANT---", { document });
@@ -146,12 +149,14 @@ import { z } from "zod";
 
     const prompt = ChatPromptTemplate.fromTemplate(
       `
-        You are generating a question that is well optimized for semantic search retrieval look at the input and try to reason about the underlying semantic intent / meaning.
-        Here is the initial question:
-        \n ------- \n
-        {question}
-        \n ------- \n
-        Formulate an improved question: 
+      You are tasked with generating an optimized question for semantic search retrieval. Analyze the input to understand the underlying semantic intent and meaning.
+      Here is the initial question:
+      \n ------- \n
+      {question}
+      \n ------- \n
+      Formulate an improved question:
+      
+      Return only the improved question, ensuring it is no longer than 400 characters.
       `
     );
 
@@ -167,9 +172,13 @@ import { z } from "zod";
     state: typeof GraphState.State
   ): Promise<Partial<typeof GraphState.State>> {
     WORKFLOW.push("node >> ---WEB SEARCH---");
+    WORKFLOW.push({ input: state.question });
+    console.log({ input: state.question });
 
     const tool = new TavilySearchResults();
     const docs = await tool.invoke({ input: state.question });
+    console.log({ docs });
+
     const webResults = new Document({ pageContent: docs });
     const newDocuments = state.documents.concat(webResults);
     WORKFLOW.push({ webResults });
@@ -180,13 +189,13 @@ import { z } from "zod";
   }
 
   async function decideToGenerateEdge(state: typeof GraphState.State) {
-    WORKFLOW.push("node >> ---DECIDE TO GENERATE---");
+    WORKFLOW.push("Edge >> ---DECIDE TO GENERATE ---");
     const filteredDocuments = state.documents;
     if (filteredDocuments.length === 0) {
-      WORKFLOW.push("node >> ", { return: "transformQueryNode" });
+      WORKFLOW.push("Edge >> ", { return: "transformQueryNode" });
       return "transformQueryNode";
     }
-    WORKFLOW.push("node >> ", { return: "generateNode" });
+    WORKFLOW.push("Edge >> ", { return: "generateNode" });
     return "generateNode";
   }
 
@@ -194,7 +203,14 @@ import { z } from "zod";
     state: typeof GraphState.State
   ): Promise<Partial<typeof GraphState.State>> {
     WORKFLOW.push("node >> ---GENERATE---");
-    const prompt = await pull<ChatPromptTemplate>("rlm/rag-prompt");
+    console.log("node >> ---GENERATE---");
+    // const prompt = await pull<ChatPromptTemplate>("rlm/rag-prompt");
+    const prompt = ChatPromptTemplate.fromTemplate(`
+      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
+      Question: {question} 
+      Context: {context} 
+      Answer:
+    `);
     WORKFLOW.push(prompt);
 
     const ragChain = prompt.pipe(model).pipe(new StringOutputParser());
@@ -231,7 +247,7 @@ import { z } from "zod";
   const app = workflow.compile();
 
   const inputs: Partial<typeof GraphState.State> = {
-    question: "Explain how the different types of agent memory work.",
+    question: "whats the weather in LA ?",
   };
 
   let finalGeneration;

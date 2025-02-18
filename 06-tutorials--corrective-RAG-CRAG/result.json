@@ -3,49 +3,49 @@
   {
     "documents": [
       {
-        "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+        "pageContent": "Lil'Log",
         "metadata": {
           "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
           "loc": {
             "lines": {
-              "from": 201,
-              "to": 201
+              "from": 39,
+              "to": 39
             }
           }
         }
       },
       {
-        "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+        "pageContent": "© 2024 Lil'Log\n    \n        Powered by\n        Hugo &\n        PaperMod",
         "metadata": {
           "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
           "loc": {
             "lines": {
-              "from": 322,
-              "to": 322
+              "from": 618,
+              "to": 622
             }
           }
         }
       },
       {
-        "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+        "pageContent": "}\n    }",
         "metadata": {
           "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
           "loc": {
             "lines": {
-              "from": 335,
-              "to": 335
+              "from": 637,
+              "to": 638
             }
           }
         }
       },
       {
-        "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+        "pageContent": "if (localStorage.getItem(\"pref-theme\") === \"dark\") {\n        document.body.classList.add('dark');\n    } else if (localStorage.getItem(\"pref-theme\") === \"light\") {\n        document.body.classList.remove('dark')",
         "metadata": {
           "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
           "loc": {
             "lines": {
-              "from": 320,
-              "to": 320
+              "from": 3,
+              "to": 6
             }
           }
         }
@@ -53,70 +53,82 @@
     ]
   },
   "node >> ---GRADE---",
-  "---GRADE: DOCUMENT RELEVANT---",
+  "---GRADE: DOCUMENT NOT RELEVANT---",
   {
     "document": {
-      "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+      "pageContent": "Lil'Log",
       "metadata": {
         "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
         "loc": {
           "lines": {
-            "from": 201,
-            "to": 201
+            "from": 39,
+            "to": 39
           }
         }
       }
     }
   },
-  "---GRADE: DOCUMENT RELEVANT---",
+  "---GRADE: DOCUMENT NOT RELEVANT---",
   {
     "document": {
-      "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+      "pageContent": "© 2024 Lil'Log\n    \n        Powered by\n        Hugo &\n        PaperMod",
       "metadata": {
         "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
         "loc": {
           "lines": {
-            "from": 322,
-            "to": 322
+            "from": 618,
+            "to": 622
           }
         }
       }
     }
   },
-  "---GRADE: DOCUMENT RELEVANT---",
+  "---GRADE: DOCUMENT NOT RELEVANT---",
   {
     "document": {
-      "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+      "pageContent": "}\n    }",
       "metadata": {
         "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
         "loc": {
           "lines": {
-            "from": 335,
-            "to": 335
+            "from": 637,
+            "to": 638
           }
         }
       }
     }
   },
-  "---GRADE: DOCUMENT RELEVANT---",
+  "---GRADE: DOCUMENT NOT RELEVANT---",
   {
     "document": {
-      "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+      "pageContent": "if (localStorage.getItem(\"pref-theme\") === \"dark\") {\n        document.body.classList.add('dark');\n    } else if (localStorage.getItem(\"pref-theme\") === \"light\") {\n        document.body.classList.remove('dark')",
       "metadata": {
         "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
         "loc": {
           "lines": {
-            "from": 320,
-            "to": 320
+            "from": 3,
+            "to": 6
           }
         }
       }
     }
   },
-  "node >> ---DECIDE TO GENERATE---",
-  "node >> ",
+  "Edge >> ---DECIDE TO GENERATE ---",
+  "Edge >> ",
   {
-    "return": "generateNode"
+    "return": "transformQueryNode"
+  },
+  "node >> ---TRANSFORM QUERY---",
+  "\"What is the current weather forecast for Los Angeles?\"",
+  "node >> ---WEB SEARCH---",
+  {
+    "input": "\"What is the current weather forecast for Los Angeles?\""
+  },
+  {
+    "webResults": {
+      "pageContent": "[{\"title\":\"Weather in Los Angeles\",\"url\":\"https://www.weatherapi.com/\",\"content\":\"{'location': {'name': 'Los Angeles', 'region': 'California', 'country': 'United States of America', 'lat': 34.0522, 'lon': -118.2428, 'tz_id': 'America/Los_Angeles', 'localtime_epoch': 1739858918, 'localtime': '2025-02-17 22:08'}, 'current': {'last_updated_epoch': 1739858400, 'last_updated': '2025-02-17 22:00', 'temp_c': 13.9, 'temp_f': 57.0, 'is_day': 0, 'condition': {'text': 'Clear', 'icon': '//cdn.weatherapi.com/weather/64x64/night/113.png', 'code': 1000}, 'wind_mph': 3.8, 'wind_kph': 6.1, 'wind_degree': 145, 'wind_dir': 'SE', 'pressure_mb': 1015.0, 'pressure_in': 29.98, 'precip_mm': 0.0, 'precip_in': 0.0, 'humidity': 81, 'cloud': 0, 'feelslike_c': 13.9, 'feelslike_f': 57.1, 'windchill_c': 13.5, 'windchill_f': 56.3, 'heatindex_c': 13.4, 'heatindex_f': 56.2, 'dewpoint_c': 12.7, 'dewpoint_f': 54.8, 'vis_km': 16.0, 'vis_miles': 9.0, 'uv': 0.0, 'gust_mph': 5.0, 'gust_kph': 8.0}}\",\"score\":0.9674723,\"raw_content\":null},{\"title\":\"Weather in Los Angeles in February 2025\",\"url\":\"https://world-weather.info/forecast/usa/los_angeles/february-2025/\",\"content\":\"Weather in Los Angeles in February 2025 (California) - Detailed Weather Forecast for a Month Weather Weather in Los Angeles Weather in Los Angeles in February 2025 Los Angeles Weather Forecast for February 2025 is based on long term prognosis and previous years' statistical data. 1 +64°+46° 2 +66°+52° 3 +63°+48° 4 +61°+50° 5 +61°+52° 6 +59°+57° 7 +59°+57° 8 +63°+50° 9 +66°+52° 10 +61°+50° 11 +59°+52° 12 +57°+50° 13 +57°+50° 14 +61°+50° 15 +66°+46° 16 +68°+50° 17 +66°+50° 18 +75°+54° 19 +73°+63° 20 +72°+64° 21 +66°+61° 22 +63°+57° +63°+52° +63°+52° +63°+52° +64°+54° +63°+54° +64°+54° Extended weather forecast in Los Angeles Weather in Washington, D.C.+39° Sacramento+52° Norwalk+57° Pasadena+55° Rosemead+57° Inglewood+57° Bellflower+57° Burbank+55° Compton+57° Bandini+57° world's temperature today Temperature units\",\"score\":0.90289277,\"raw_content\":null},{\"title\":\"Weather in Los Angeles in February 2025 - Detailed Forecast\",\"url\":\"https://www.easeweather.com/north-america/united-states/california/los-angeles-county/los-angeles/february\",\"content\":\"Weather in Los Angeles in February 2025 - Detailed Forecast Weather in Los Angeles for February 2025 Your guide to Los Angeles weather in February - trends and predictions The forecast for the first days of February 2025 in Los Angeles predicts temperatures to be around 18 °F, close to the historical average. In general, the average temperature in Los Angeles at the beginning of February is 18.1 °F. Los Angeles experiences moderate rainfall in February, with an average of 10 rainy days and a total precipitation of 79.7 mm. Los Angeles in February average weather Temperatures trend during February in Los Angeles Los Angeles in February - FAQ Get accurate weather forecasts for Los Angeles, located at latitude 34.052 and longitude -118.244.\",\"score\":0.8961153,\"raw_content\":null},{\"title\":\"Los Angeles weather in February 2025 - METEOPROG.COM\",\"url\":\"https://www.meteoprog.com/weather/Losangeles/month/february/\",\"content\":\"Los Angeles weather in February 2025 ⋆ Los Angeles temperature in February ≡ Weather forecast in United States | METEOPROG Weather in United States Weather Widgets WEATHER 7-day Forecast 2 weeks overview Weather on a map Weather Widget Los Angeles weather in February 2025 +21°+10° +22°+10° +22°+11° +21°+11° +20°+10° +20°+9° +20°+9° +20°+9° +20°+10° +20°+10° +20°+11° +21°+11° +21°+11° +21°+11° +22°+10° +22°+10° February in Los Angeles Max. temperature +32°C Min. temperature -0.6°C Weather Weather in United States Monthly weather forecast in Los Angeles Weather in February Weather Widgets Editorial policy Hyperlink to Meteoprog.com is required when using materials from the site. The editorial staff of the project may not share the opinion of the authors and is not responsible for copyrighted materials.\",\"score\":0.86767644,\"raw_content\":null},{\"title\":\"Los Angeles, CA Daily Weather Forecast for February 2025\",\"url\":\"https://www.weathertab.com/en/d/o/02/united-states/california/los-angeles/\",\"content\":\"Calendar Forecast Daily Forecast Detailed Forecast Los Angeles, CA Daily Weather Forecast for February 2025 Our Los Angeles, California Daily Weather Forecast for February 2025, developed from a specialized dynamic long-range model, provides precise daily temperature and rainfall predictions. Click or Tap on any day for a detailed forecast. Waning Crescent Waning Crescent Waning Crescent Precipitation Forecast Rain Frequency 3 to 5 days Temperature Forecast Temperature Forecast Normal Weather Forecast Legend WeatherTAB helps you plan activities on days with the least risk of rain. Low risk of rain/snow. Medium risk of rain/snow. High risk of rain/snow. Forecast risk of rain/snow. Click or Tap on any day for a detailed forecast. Sporting Event Forecasts Weather forecasts that start where the others stop\",\"score\":0.8576849,\"raw_content\":null}]",
+      "metadata": {}
+    }
   },
   "node >> ---GENERATE---",
   {
@@ -129,6 +141,10 @@
       "ChatPromptTemplate"
     ],
     "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
       "messages": [
         {
           "lc": 1,
@@ -150,22 +166,18 @@
                 "PromptTemplate"
               ],
               "kwargs": {
-                "template": "You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: {question} \nContext: {context} \nAnswer:",
                 "input_variables": [
                   "question",
                   "context"
                 ],
-                "template_format": "f-string"
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
               }
             }
           }
         }
-      ],
-      "input_variables": [
-        "question",
-        "context"
       ]
     }
   },
-  "I don't know the specific details on how different types of agent memory work. However, I can provide a general overview: Agent memories include a Memory Stream (long-term database) and Reflection Mechanism (higher-level summaries of past events). These mechanisms enable the agent to learn from experience and adapt its behavior over time."
+  "I don't have the current weather forecast for Los Angeles in real-time, but according to the retrieved context, the average temperature in Los Angeles at the beginning of February is around 18°F (-7.8°C). The weather forecast for February 2025 predicts temperatures to be around 21-22°F (-6.2-4.4°C) with moderate rainfall and a total precipitation of 79.7 mm."
 ]
