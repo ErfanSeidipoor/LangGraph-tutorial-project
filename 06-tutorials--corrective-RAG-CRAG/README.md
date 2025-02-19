@@ -1,4 +1,4 @@
-# LangGraphJS > tutorials > Customer support chatbot with a small model
+# LangGraphJS > tutorials > Corrective RAG (CRAG)
 
 This project is based on the [Corrective RAG (CRAG)](https://langchain-ai.github.io/langgraphjs/tutorials/rag/langgraph_crag/)
 
