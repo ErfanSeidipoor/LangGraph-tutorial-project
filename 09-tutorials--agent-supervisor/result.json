@@ -1,0 +1,498 @@
+[
+  "node >> ---RETRIEVE---",
+  {
+    "config": {
+      "tags": [],
+      "metadata": {
+        "langgraph_step": 1,
+        "langgraph_node": "retrieveNode",
+        "langgraph_triggers": [
+          "__start__:retrieveNode"
+        ],
+        "langgraph_path": [
+          "__pregel_pull",
+          "retrieveNode"
+        ],
+        "langgraph_checkpoint_ns": "retrieveNode:75b8741d-9612-57dc-a3d6-7413bdf168b7",
+        "__pregel_resuming": false,
+        "__pregel_task_id": "75b8741d-9612-57dc-a3d6-7413bdf168b7",
+        "checkpoint_ns": "retrieveNode:75b8741d-9612-57dc-a3d6-7413bdf168b7"
+      },
+      "recursionLimit": 50,
+      "configurable": {
+        "__pregel_resuming": false,
+        "__pregel_task_id": "75b8741d-9612-57dc-a3d6-7413bdf168b7",
+        "checkpoint_map": {
+          "": "1efee854-75e2-6cf0-fffe-5ea2132082f2"
+        },
+        "__pregel_scratchpad": {
+          "callCounter": 0,
+          "interruptCounter": -1,
+          "resume": []
+        },
+        "checkpoint_ns": "retrieveNode:75b8741d-9612-57dc-a3d6-7413bdf168b7"
+      },
+      "runName": "retrieveNode"
+    }
+  },
+  {
+    "documents": [
+      {
+        "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 201,
+              "to": 201
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 322,
+              "to": 322
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 335,
+              "to": 335
+            }
+          }
+        }
+      },
+      {
+        "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+        "metadata": {
+          "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "loc": {
+            "lines": {
+              "from": 320,
+              "to": 320
+            }
+          }
+        }
+      }
+    ]
+  },
+  "node >> ---gradeDocumentsNode---",
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "the agent’s working memory, up to three, to be used as context for querying LLM.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 201,
+            "to": 201
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "Memory stream: is a long-term memory module (external database) that records a comprehensive list of agents’ experience in natural language.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 322,
+            "to": 322
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "Reflection mechanism: synthesizes memories into higher level inferences over time and guides the agent’s future behavior. They are higher-level summaries of past events (<- note that this is a bit different from self-reflection above)",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 335,
+            "to": 335
+          }
+        }
+      }
+    }
+  },
+  "---GRADE: DOCUMENT RELEVANT---",
+  {
+    "document": {
+      "pageContent": "The design of generative agents combines LLM with memory, planning and reflection mechanisms to enable agents to behave conditioned on past experience, as well as to interact with other agents.",
+      "metadata": {
+        "source": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+        "loc": {
+          "lines": {
+            "from": 320,
+            "to": 320
+          }
+        }
+      }
+    }
+  },
+  "Edge >> ---decideToGenerateEdge ---",
+  "Edge >> ",
+  {
+    "return": "generateNode"
+  },
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "I don't know the specifics of how different types of agent memory work. The context provides information on a \"memory stream\" (long-term external database), a \"reflection mechanism\" (higher-level summaries of past events), and generative agents that combine these with language models, planning, and reflection mechanisms. However, I'm unable to provide further details on the specific types or variations of agent memory.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "no"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "not supported",
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "I don't know the answer. The context provided doesn't explain how different types of agent memory work. It mentions a memory stream as a long-term memory module, and a reflection mechanism that synthesizes memories into higher-level inferences, but it doesn't provide information on other types of agent memory.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "no"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "not supported",
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "I don't know how the different types of agent memory work specifically. However, I can tell that there are at least three mentioned: working memory (used for context), a memory stream (long-term database of experience), and a reflection mechanism (synthesizes memories into higher-level inferences). The exact functions and differences between these mechanisms aren't specified in the provided context.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "no"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "not supported",
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "I don't know the specifics about how different types of agent memory work, but I can describe their general functions: Memory stream is a long-term database that stores an agent's experiences. Reflection mechanism synthesizes memories into higher-level inferences guiding future behavior. The design of generative agents incorporates these mechanisms to enable past experience-based behavior and interactions with other agents.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "no"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "not supported",
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "I don't know the answer to this question about how different types of agent memory work. The provided context only describes a \"memory stream\" and a \"reflection mechanism\", but does not provide information on additional types of agent memory. The context also mentions that generative agents combine LLM with these mechanisms, but doesn't explain other memory types.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "no"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "not supported",
+  "node >> ---generateNode---",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "prompts",
+      "chat",
+      "ChatPromptTemplate"
+    ],
+    "kwargs": {
+      "input_variables": [
+        "question",
+        "context"
+      ],
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "HumanMessagePromptTemplate"
+          ],
+          "kwargs": {
+            "prompt": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain_core",
+                "prompts",
+                "prompt",
+                "PromptTemplate"
+              ],
+              "kwargs": {
+                "input_variables": [
+                  "question",
+                  "context"
+                ],
+                "template_format": "f-string",
+                "template": "\n      You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\n      Question: {question} \n      Context: {context} \n      Answer:\n    "
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "There are three main types of agent memory:\n\n1. Working memory: a temporary storage for information used in the current interaction.\n2. Memory stream: a long-term database storing an agent's comprehensive list of experiences.\n3. Reflection mechanism: synthesizes memories into higher-level inferences to guide future behavior.\n\nI don't know how these types specifically interact or function together, but this gives general overview of each.",
+  "node---generateGenerationVDocumentsGradeNode---",
+  {
+    "generateGenerationVDocumentsGrade": "yes"
+  },
+  "Edge ---gradeGenerationVDocumentsEdge---",
+  "supported",
+  "node---generateGenerationVQuestionGradeNode---",
+  {
+    "generationVQuestionGrade": "yes"
+  },
+  "edge---gradeGenerationVQuestionEdge---",
+  "useful"
+]

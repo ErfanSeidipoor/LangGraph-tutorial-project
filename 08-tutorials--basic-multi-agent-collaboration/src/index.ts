@@ -1,21 +1,19 @@
+import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 import { AIMessage, BaseMessage, HumanMessage } from "@langchain/core/messages";
 import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
+import { Runnable, RunnableConfig } from "@langchain/core/runnables";
 import { StructuredTool, tool } from "@langchain/core/tools";
 import { convertToOpenAITool } from "@langchain/core/utils/function_calling";
-import { Annotation } from "@langchain/langgraph";
-import { ChatOpenAI } from "@langchain/openai";
-import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
-import * as tslab from "tslab";
-import { createCanvas } from "canvas";
-import { z } from "zod";
-import * as fs from "fs";
-import { END, START, StateGraph } from "@langchain/langgraph";
-import { Runnable, RunnableConfig } from "@langchain/core/runnables";
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { Annotation, END, START, StateGraph } from "@langchain/langgraph";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
+import { createCanvas } from "canvas";
 import * as d3 from "d3";
+import * as fs from "fs";
+import { z } from "zod";
 
 (async () => {
   async function createAgent({
@@ -23,7 +21,7 @@ import * as d3 from "d3";
     tools,
     systemMessage,
   }: {
-    llm: ChatOpenAI;
+    llm: ChatGoogleGenerativeAI;
     tools: StructuredTool[];
     systemMessage: string;
   }) {
@@ -140,10 +138,8 @@ import * as d3 from "d3";
         ctx.stroke();
         ctx.fillText(d.toString(), margin.left - 8, yCoord);
       });
-      tslab.display.png(canvas.toBuffer());
+      // tslab.display.png(canvas.toBuffer());
       fs.writeFileSync("./chart.png", Buffer.from(await canvas.toBuffer()));
-
-      console.log("Chart has been generated and displayed to the user!");
 
       return "Chart has been generated and displayed to the user!";
     },
@@ -184,7 +180,7 @@ import * as d3 from "d3";
     };
   }
 
-  const llm = new ChatOpenAI({ model: "gpt-3.5-turbo" });
+  const llm = new ChatGoogleGenerativeAI({ model: "gemini-1.5-pro" });
 
   /* ---------------------------------- Nodes --------------------------------- */
 
@@ -234,6 +230,8 @@ import * as d3 from "d3";
     const messages = state.messages;
     const lastMessage = messages[messages.length - 1] as AIMessage;
 
+    console.log("routerEdge >", JSON.stringify({ lastMessage }, undefined, 2));
+
     if (lastMessage?.tool_calls && lastMessage.tool_calls.length > 0) {
       return "toolNode";
     }
@@ -282,7 +280,7 @@ import * as d3 from "d3";
         }),
       ],
     },
-    { recursionLimit: 150 }
+    { recursionLimit: 3 }
   );
 
   const prettifyOutput = (output: Record<string, any>) => {
@@ -309,7 +307,7 @@ import * as d3 from "d3";
   };
 
   for await (const output of await streamResults) {
-    console.log({ output });
+    console.log(JSON.stringify({ output }, undefined, 2));
 
     if (!output?.__end__) {
       prettifyOutput(output);
