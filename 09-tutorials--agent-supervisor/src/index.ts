@@ -1,6 +1,5 @@
 import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 import {
-  AIMessage,
   BaseMessage,
   HumanMessage,
   SystemMessage,
@@ -9,16 +8,11 @@ import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
-import { Runnable, RunnableConfig } from "@langchain/core/runnables";
-import {
-  DynamicStructuredTool,
-  StructuredTool,
-  tool,
-} from "@langchain/core/tools";
-import { convertToOpenAITool } from "@langchain/core/utils/function_calling";
+import { RunnableConfig } from "@langchain/core/runnables";
+import { DynamicStructuredTool } from "@langchain/core/tools";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { Annotation, END, START, StateGraph } from "@langchain/langgraph";
-import { createReactAgent, ToolNode } from "@langchain/langgraph/prebuilt";
+import { createReactAgent } from "@langchain/langgraph/prebuilt";
 import { createCanvas } from "canvas";
 
 import * as d3 from "d3";
