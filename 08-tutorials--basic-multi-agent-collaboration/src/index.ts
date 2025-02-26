@@ -64,10 +64,6 @@ import { z } from "zod";
 
   const chartTool = tool(
     async ({ data }) => {
-      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", {
-        data,
-      });
-
       const width = 500;
       const height = 500;
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
