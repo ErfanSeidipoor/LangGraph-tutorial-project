@@ -684,6 +684,22 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
   const buffer2 = (await (await docsWritingChain.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
   fs.writeFile("./docs-writing-graph.png", Buffer.from(await buffer2));
 
+  let resultStream = await docsWritingChain.stream(
+    {
+      messages: [
+        new HumanMessage(
+          "Write a limerick and make a bar chart of the characters used."
+        ),
+      ],
+    },
+    { recursionLimit: 100 }
+  );
+
+  for await (const step of resultStream) {
+    console.log(step);
+    console.log("---");
+  }
+
   /* --------------------------------- Result --------------------------------- */
   // prettier-ignore
   fs.writeFile("result.json",JSON.stringify(RESULT, null, 2),"utf8");
