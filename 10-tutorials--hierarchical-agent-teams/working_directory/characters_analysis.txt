@@ -1,0 +1,11 @@
+**Limerick:**
+
+There once was a cat with a hat,
+Who thought he was awfully fat,
+He danced in the night,
+Gave everyone a fright,
+And swiftly ran off with a rat.
+
+**Bar Chart of Characters Used:**
+
+To create a bar chart of the characters used in the limerick, a frequency analysis of each character can be done, excluding spaces for clarity. The chart can visualize the number of times each letter and some punctuation marks appeared in the limerick.

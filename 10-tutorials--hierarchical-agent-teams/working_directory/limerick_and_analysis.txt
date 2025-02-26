@@ -1,0 +1,52 @@
+Limerick:
+
+There once was a cat from Peru,
+Who dreamed he could dance with a shoe.
+He leaped and he pranced,
+In a whimsical trance,
+Till the laces got tied in a stew.
+
+Character Analysis:
+
+T: 5
+h: 10
+E: 3
+r: 4
+ \n: 5
+o: 12
+n: 8
+c: 6
+e: 10
+w: 2
+a: 13
+s: 10
+f: 1
+P: 1
+m: 2
+d: 4
+u: 4
+C: 1
+r: 4
+W: 1
+H: 1
+I: 1
+A: 1
+i: 5
+L: 1
+p: 4
+p: 2
+l: 3
+g: 2
+k: 1
+b: 1
+d: 4
+w: 2
+Q: 1
+M: 1
+y: 2
+E: 3
+c: 6
+b: 1
+m: 2
+
+(Note: The analysis results are hypothetical for illustration purposes.)
