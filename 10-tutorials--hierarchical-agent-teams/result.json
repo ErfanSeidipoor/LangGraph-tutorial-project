@@ -199,5 +199,206 @@
         }
       }
     }
+  },
+  "createTeamSupervisor",
+  {
+    "members": [
+      "DocWriter",
+      "NoteTaker",
+      "ChartGenerator"
+    ],
+    "supervisorOutput": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "runnables",
+        "RunnableSequence"
+      ],
+      "kwargs": {
+        "first": {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "prompts",
+            "chat",
+            "ChatPromptTemplate"
+          ],
+          "kwargs": {
+            "input_variables": [
+              "messages"
+            ],
+            "messages": [
+              {
+                "lc": 1,
+                "type": "constructor",
+                "id": [
+                  "langchain_core",
+                  "prompts",
+                  "chat",
+                  "SystemMessagePromptTemplate"
+                ],
+                "kwargs": {
+                  "prompt": {
+                    "lc": 1,
+                    "type": "constructor",
+                    "id": [
+                      "langchain_core",
+                      "prompts",
+                      "prompt",
+                      "PromptTemplate"
+                    ],
+                    "kwargs": {
+                      "input_variables": [
+                        "members"
+                      ],
+                      "template_format": "f-string",
+                      "template": "You are a supervisor tasked with managing a conversation between the following workers:  {members}. Given the following user request, respond with the worker to act next. Each worker will perform a task and respond with their results and status. When finished, respond with FINISH.\n\n Select strategically to minimize the number of steps taken."
+                    }
+                  }
+                }
+              },
+              {
+                "lc": 1,
+                "type": "constructor",
+                "id": [
+                  "langchain_core",
+                  "prompts",
+                  "chat",
+                  "MessagesPlaceholder"
+                ],
+                "kwargs": {
+                  "variable_name": "messages"
+                }
+              },
+              {
+                "lc": 1,
+                "type": "constructor",
+                "id": [
+                  "langchain_core",
+                  "prompts",
+                  "chat",
+                  "SystemMessagePromptTemplate"
+                ],
+                "kwargs": {
+                  "prompt": {
+                    "lc": 1,
+                    "type": "constructor",
+                    "id": [
+                      "langchain_core",
+                      "prompts",
+                      "prompt",
+                      "PromptTemplate"
+                    ],
+                    "kwargs": {
+                      "input_variables": [
+                        "options"
+                      ],
+                      "template_format": "f-string",
+                      "template": "Given the conversation above, who should act next? Or should we FINISH? Select one of: {options}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "middle": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "runnables",
+              "RunnableBinding"
+            ],
+            "kwargs": {
+              "bound": {
+                "lc": 1,
+                "type": "constructor",
+                "id": [
+                  "langchain",
+                  "chat_models",
+                  "openai",
+                  "ChatOpenAI"
+                ],
+                "kwargs": {
+                  "model": "gpt-4o",
+                  "openai_api_key": {
+                    "lc": 1,
+                    "type": "secret",
+                    "id": [
+                      "OPENAI_API_KEY"
+                    ]
+                  }
+                }
+              },
+              "kwargs": {
+                "tools": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "route",
+                      "description": "Select the next role.",
+                      "parameters": {
+                        "type": "object",
+                        "properties": {
+                          "reasoning": {
+                            "type": "string"
+                          },
+                          "next": {
+                            "type": "string",
+                            "enum": [
+                              "__end__",
+                              "DocWriter",
+                              "NoteTaker",
+                              "ChartGenerator"
+                            ]
+                          },
+                          "instructions": {
+                            "type": "string",
+                            "description": "The specific instructions of the sub-task the next role should accomplish."
+                          }
+                        },
+                        "required": [
+                          "reasoning",
+                          "next",
+                          "instructions"
+                        ],
+                        "additionalProperties": false,
+                        "$schema": "http://json-schema.org/draft-07/schema#"
+                      }
+                    }
+                  }
+                ],
+                "tool_choice": "route"
+              },
+              "config": {}
+            }
+          },
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain",
+              "output_parsers",
+              "openai_tools",
+              "JsonOutputToolsParser"
+            ],
+            "kwargs": {}
+          }
+        ],
+        "last": {
+          "lc": 1,
+          "type": "not_implemented",
+          "id": [
+            "langchain_core",
+            "runnables",
+            "RunnableLambda"
+          ]
+        }
+      }
+    }
   }
 ]
