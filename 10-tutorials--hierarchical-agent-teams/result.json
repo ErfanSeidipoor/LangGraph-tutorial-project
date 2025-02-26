@@ -150,7 +150,7 @@
                           "next": {
                             "type": "string",
                             "enum": [
-                              "__end__",
+                              "FINISH",
                               "Search",
                               "ScrapeWebpage"
                             ]
@@ -198,6 +198,88 @@
           ]
         }
       }
+    }
+  },
+  {
+    "supervisor > addConditionalEdges": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "What's the price of a big mac in Argentina?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "19ba19d0-4137-429c-83f7-9ca4d6fc6a45"
+          }
+        }
+      ],
+      "next": "Search",
+      "instructions": "Search for the current price of a Big Mac in Argentina."
+    }
+  },
+  {
+    "searchNodeOutput": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "As of the latest information, the price of a Big Mac in Argentina is approximately $7.37 USD.",
+            "name": "Search",
+            "additional_kwargs": {},
+            "response_metadata": {}
+          }
+        }
+      ]
+    }
+  },
+  {
+    "supervisor > addConditionalEdges": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "What's the price of a big mac in Argentina?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "19ba19d0-4137-429c-83f7-9ca4d6fc6a45"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "As of the latest information, the price of a Big Mac in Argentina is approximately $7.37 USD.",
+            "name": "Search",
+            "additional_kwargs": {},
+            "response_metadata": {}
+          }
+        }
+      ],
+      "next": "FINISH",
+      "instructions": "The task is complete as the requested information has been provided."
     }
   }
 ]

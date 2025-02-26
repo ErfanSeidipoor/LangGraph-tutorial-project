@@ -349,7 +349,7 @@ import * as path from "path";
       description: "Select the next role.",
       schema: z.object({
         reasoning: z.string(),
-        next: z.enum([END, ...members]),
+        next: z.enum(["FINISH", ...members]),
         instructions: z
           .string()
           .describe(
@@ -481,7 +481,11 @@ import * as path from "path";
     .addNode("supervisor", supervisorAgent)
     .addEdge("searchNode", "supervisor")
     .addEdge("researchNode", "supervisor")
-    .addConditionalEdges("supervisor", (x) => x.next, {
+    .addConditionalEdges("supervisor", (x) => { 
+      RESULT.push({"supervisor > addConditionalEdges":x})
+      console.log("addConditionalEdges", {x})
+      return x.next
+    }, {
       Search: "searchNode",
       ScrapeWebpage: "researchNode",
       FINISH: END,
