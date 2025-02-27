@@ -183,8 +183,7 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
 
   const chartTool = tool(
     async ({ data }) => {
-
-      RESULT.push({chartToolData: data})
+      RESULT.push({ chartToolData: data });
       const width = 500;
       const height = 500;
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
@@ -256,7 +255,10 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
         ctx.fillText(d.toString(), margin.left - 8, yCoord);
       });
       const randomId = Math.random().toString(36).substring(2, 15);
-      fs.writeFile(`./chart-${randomId}.png`, Buffer.from(await canvas.toBuffer()));
+      fs.writeFile(
+        `./chart-${randomId}.png`,
+        Buffer.from(await canvas.toBuffer())
+      );
 
       return "Chart has been generated and displayed to the user!";
     },
@@ -700,6 +702,88 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
   for await (const step of resultStream) {
     console.log(step);
     console.log("---");
+  }
+
+  /* ------------------------------- SuperGraph ------------------------------- */
+
+  const State = Annotation.Root({
+    messages: Annotation<BaseMessage[]>({
+      reducer: (x, y) => x.concat(y),
+    }),
+    next: Annotation<string>({
+      reducer: (x, y) => y ?? x,
+      default: () => "ResearchTeam",
+    }),
+    instructions: Annotation<string>({
+      reducer: (x, y) => y ?? x,
+      default: () => "Solve the user's question",
+    }),
+  });
+
+  const supervisorNode = await createTeamSupervisor({
+    llm,
+    systemPrompt:
+      "You are a supervisor tasked with managing a conversation between the" +
+      " following teams: {members}. Given the following user request," +
+      " respond with the worker to act next. Each worker will perform a" +
+      " task and respond with their results and status. When finished," +
+      " respond with FINISH.\n\n" +
+      " Select strategically to minimize the number of steps taken.",
+    members: ["ResearchTeam", "DocsWriting"],
+  });
+
+  const getMessages = RunnableLambda.from((state: typeof State.State) => {
+    return { messages: state.messages };
+  });
+
+  const joinGraph = RunnableLambda.from(
+    (response: { messages: BaseMessage[] }) => {
+      return { messages: [response.messages[response.messages.length - 1]] };
+    }
+  );
+
+  const superGraph = new StateGraph(State)
+    .addNode("ResearchTeam", async (input) => {
+      const getMessagesResult = await getMessages.invoke(input);
+      const researchChainResult = await researchChain.invoke({
+        messages: getMessagesResult.messages,
+      });
+      const joinGraphResult = await joinGraph.invoke({
+        messages: researchChainResult.messages,
+      });
+    })
+    .addNode(
+      "PaperWritingTeam",
+      getMessages.pipe(docsWritingChain).pipe(joinGraph)
+    )
+    .addNode("supervisor", supervisorNode)
+    .addEdge("ResearchTeam", "supervisor")
+    .addEdge("PaperWritingTeam", "supervisor")
+    .addConditionalEdges("supervisor", (x) => x.next, {
+      PaperWritingTeam: "PaperWritingTeam",
+      ResearchTeam: "ResearchTeam",
+      FINISH: END,
+    })
+    .addEdge(START, "supervisor");
+
+  const compiledSuperGraph = superGraph.compile();
+
+  const resultStreamFinal = compiledSuperGraph.stream(
+    {
+      messages: [
+        new HumanMessage(
+          "Look up a current event, write a poem about it, then plot a bar chart of the distribution of words therein."
+        ),
+      ],
+    },
+    { recursionLimit: 150 }
+  );
+
+  for await (const step of await resultStreamFinal) {
+    if (!step.__end__) {
+      console.log(step);
+      console.log("---");
+    }
   }
 
   /* --------------------------------- Result --------------------------------- */
