@@ -508,20 +508,20 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
   const buffer = (await (await researchChain.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
   fs.writeFile("./research-team-graph.png", Buffer.from(await buffer));
 
-  // const streamResults = researchChain.stream(
-  //   {
-  //     messages: [
-  //       new HumanMessage("What's the price of a big mac in Argentina?"),
-  //     ],
-  //   },
-  //   { recursionLimit: 100 }
-  // );
-  // for await (const output of await streamResults) {
-  //   if (!output?.__end__) {
-  //     console.log(output);
-  //     console.log("----");
-  //   }
-  // }
+  const streamResults = researchChain.stream(
+    {
+      messages: [
+        new HumanMessage("What's the price of a big mac in Argentina?"),
+      ],
+    },
+    { recursionLimit: 100 }
+  );
+  for await (const output of await streamResults) {
+    if (!output?.__end__) {
+      console.log(output);
+      console.log("----");
+    }
+  }
 
   /* -------------------------- Document Writing Team ------------------------- */
 
@@ -786,7 +786,11 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
     }
   }
 
+  // prettier-ignore
+  const buffer3 = (await (await compiledSuperGraph.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
+  fs.writeFile("./super-graph.png", Buffer.from(await buffer3));
+
   /* --------------------------------- Result --------------------------------- */
   // prettier-ignore
-  fs.writeFile("result.json",JSON.stringify(RESULT, null, 2),"utf8");
+  // fs.writeFile("result.json",JSON.stringify(RESULT, null, 2),"utf8");
 })();
