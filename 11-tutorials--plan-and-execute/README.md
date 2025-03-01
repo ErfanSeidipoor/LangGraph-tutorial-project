@@ -11,4 +11,4 @@ This compares to a typical ReAct style agent where you think one step at a time.
 - Explicit long term planning (which even really strong LLMs can struggle with)
 - Ability to use smaller/weaker models for the execution step, only using larger/better models for the planning step
 
-![Agent Workflow](./diagram-1.png)
+![Workflow](./diagram-1.png)
