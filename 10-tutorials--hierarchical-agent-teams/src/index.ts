@@ -4,19 +4,16 @@ import {
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
+import { JsonOutputToolsParser } from "@langchain/core/output_parsers/openai_tools";
 import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
-import { Runnable, RunnableConfig } from "@langchain/core/runnables";
-import {
-  DynamicStructuredTool,
-  StructuredToolInterface,
-  tool,
-} from "@langchain/core/tools";
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { JsonOutputToolsParser } from "@langchain/core/output_parsers/openai_tools";
+import { Runnable } from "@langchain/core/runnables";
+import { StructuredToolInterface, tool } from "@langchain/core/tools";
 
+import { CheerioWebBaseLoader } from "@langchain/community/document_loaders/web/cheerio";
+import { RunnableLambda } from "@langchain/core/runnables";
 import {
   Annotation,
   END,
@@ -25,16 +22,13 @@ import {
   StateGraph,
 } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
-import { createCanvas } from "canvas";
-import { CheerioWebBaseLoader } from "@langchain/community/document_loaders/web/cheerio";
 import { ChatOpenAI } from "@langchain/openai";
-import { RunnableLambda } from "@langchain/core/runnables";
+import { createCanvas } from "canvas";
 
 import * as d3 from "d3";
 import * as fs from "fs/promises";
-import { z } from "zod";
 import * as path from "path";
-import { next } from "cheerio/dist/commonjs/api/traversing";
+import { z } from "zod";
 
 (async () => {
   const RESULT: (object | string)[] = [];
@@ -791,6 +785,6 @@ import { next } from "cheerio/dist/commonjs/api/traversing";
   fs.writeFile("./super-graph.png", Buffer.from(await buffer3));
 
   /* --------------------------------- Result --------------------------------- */
-  // prettier-ignore
-  // fs.writeFile("result.json",JSON.stringify(RESULT, null, 2),"utf8");
+  prettier - ignore;
+  fs.writeFile("result.json", JSON.stringify(RESULT, null, 2), "utf8");
 })();

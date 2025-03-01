@@ -1,0 +1,142 @@
+[
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "who is the winner of the us open ?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "df95018f-19b4-4bb7-9f33-62171be87b1a"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": [
+            {
+              "functionCall": {
+                "name": "tavily_search_results_json",
+                "args": {
+                  "input": "winner of the us open"
+                }
+              }
+            }
+          ],
+          "tool_calls": [
+            {
+              "name": "tavily_search_results_json",
+              "args": {
+                "input": "winner of the us open"
+              },
+              "type": "tool_call"
+            }
+          ],
+          "additional_kwargs": {
+            "finishReason": "STOP",
+            "avgLogprobs": -0.01891312003135681
+          },
+          "usage_metadata": {
+            "input_tokens": 50,
+            "output_tokens": 14,
+            "total_tokens": 64
+          },
+          "invalid_tool_calls": [],
+          "response_metadata": {
+            "finishReason": "STOP",
+            "avgLogprobs": -0.01891312003135681
+          },
+          "id": "88a00eb5-5b80-462c-bc55-ac3aa5afbc0b"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "name": "tavily_search_results_json",
+          "content": "[{\"title\":\"U.S. Open Winners: The Full List of Golf Champions\",\"url\":\"https://www.golfcompendium.com/2018/11/us-open-winners.html\",\"content\":\"U.S. Open Winners: The Full List of Golf Champions U.S. Open Winners: The Full List of Golf Champions The U.S. Open golf tournament is the national championship of the USGA, first played in 1895. 2 wins: Alex Smith, John McDermott, Walter Hagen, Gene Sarazen, Ralph Guldahl, Cary Middlecoff, Julius Boros, Billy Casper, Lee Trevino, Andy North, Curtis Strange, Ernie Els, Lee Janzen, Payne Stewart, Retief Goosen, Brooks Koepka, Bryson DeChambeau U.S. Open Winners: The Full List of Golf Champions U.S. Women's Open Winners: Full List of Golf Champ... 2014 U.S. Open Winner and Scores 2015 U.S. Open Winner and Scores 2016 U.S. Open Winner and Scores 2017 U.S. Open Winner and Scores 2000 U.S. Open Golf Championship Winner and Scores\",\"score\":0.82082915,\"raw_content\":null},{\"title\":\"List of U.S. Open (golf) champions - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/List_of_U.S._Open_(golf)_champions\",\"content\":\"1936     United States  Tony Manero Baltusrol Golf Club Springfield, New Jersey 282 −6 1947     United States  Lew Worsham†[u] St. Louis Country Club  St. Louis, Missouri 282 −2 1953     United States  Ben Hogan   Oakmont Country Club    Oakmont, Pennsylvania   283 −5 1967     United States  Jack Nicklaus   Baltusrol Golf Club Springfield, New Jersey 275 −5 1968     United States  Lee Trevino Oak Hill Country Club   Rochester, New York 275 −5 1980     United States  Jack Nicklaus   Baltusrol Golf Club Springfield, New Jersey 272 −8 1989     United States  Curtis Strange  Oak Hill Country Club   Rochester, New York 278 −2 1993     United States  Lee Janzen  Baltusrol Golf Club Springfield, New Jersey 272 −8 2020     United States  Bryson DeChambeau   Winged Foot Golf Club   Mamaroneck, New York    274 −6\",\"score\":0.7211353,\"raw_content\":null},{\"title\":\"Golf US Open Winners List - Topend Sports\",\"url\":\"https://www.topendsports.com/events/golf-majors/us-open/winners.htm\",\"content\":\"Golf US Open Winners List Home > Events > Golf > Majors > US Open > Winners Here are the winners of the US Open Golf Championships since the first event in 1895. | USA | 274 (−6) | | 1975 | Lou Graham | USA | 287 (+3) PO | Featured Page: Timeline of Significant Events in Ballon d'Or History Trending Page: Super Bowl Winners List In terms of single sport events, nothing beats the FIFA World Cup. To see what's coming up, check out the calendar of major sporting events. CITE THIS PAGE: Robert Wood, \\\"Golf US Open Winners List.\\\" Topend Sports Website, first published July 2010, https://www.topendsports.com/events/golf-majors/us-open/winners.htm, Accessed 9 February 2025  → How to Cite PAGES\",\"score\":0.68723184,\"raw_content\":null}]",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "9a57b27d-b7ac-4963-a42d-11c03ca33976"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "This search result references multiple US Opens, including the golf tournament. Can you clarify which sport you're interested in?\n",
+          "tool_calls": [],
+          "additional_kwargs": {
+            "finishReason": "STOP",
+            "avgLogprobs": -0.21549671173095702
+          },
+          "usage_metadata": {
+            "input_tokens": 934,
+            "output_tokens": 25,
+            "total_tokens": 959
+          },
+          "invalid_tool_calls": [],
+          "response_metadata": {
+            "finishReason": "STOP",
+            "avgLogprobs": -0.21549671173095702
+          },
+          "id": "d4a2c0ca-61a9-4d44-987a-a8b612b5db8c"
+        }
+      }
+    ]
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "Here's a simple step-by-step plan:\n\n**Step 1: Check the latest news and updates on the Australian Open**\n\n* Go to a reliable sports website or news outlet (e.g. ESPN, BBC Sport, etc.)\n* Search for \"Australian Open results\" or \"current Australian Open winner\"\n* Look for the most recent update on the tournament\n\n**Step 2: Identify the current Australian Open winner**\n\n* Read through the latest news article or check the sports website's leaderboard\n* Note down the name of the current Australian Open winner\n\n**Step 3: Research the hometown of the current Australian Open winner**\n\n* Look up information about the current Australian Open winner online (e.g. Wikipedia, Google)\n* Search for their hometown or birthplace\n* Take note of the correct answer\n\n**Step 4: Verify the information (optional)**\n\n* If possible, cross-check with multiple sources to ensure accuracy\n* Check if the information is up-to-date and reliable\n\n**Final Answer:** The hometown of the current Australian Open winner is [insert answer].",
+      "tool_calls": [],
+      "response_metadata": {
+        "model": "llama3.2",
+        "created_at": "2025-03-01T08:13:19.09106Z",
+        "done_reason": "stop",
+        "done": true,
+        "total_duration": 5204394042,
+        "load_duration": 40147250,
+        "prompt_eval_count": 105,
+        "prompt_eval_duration": 214000000,
+        "eval_count": 217,
+        "eval_duration": 4949000000
+      },
+      "usage_metadata": {
+        "input_tokens": 105,
+        "output_tokens": 217,
+        "total_tokens": 322
+      },
+      "invalid_tool_calls": [],
+      "additional_kwargs": {}
+    }
+  }
+]
