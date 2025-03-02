@@ -1,0 +1,56 @@
+[
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "Plan: Identify the winner of the 2023 Australian Open. This requires finding the name of the winner for either the men's or women's singles category. Use Google to get updated and specific results.  \n#E1 = Google[\"2023 Australian Open winner\"]\n\nPlan: Determine the hometown or origin of the winner found in #E1. Use Google to find the specific hometown of that individual.  \n#E2 = Google[Hometown of #E1]",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 438,
+          "completionTokens": 94,
+          "totalTokens": 532
+        },
+        "finish_reason": "stop",
+        "model_name": "gpt-4o-2024-08-06",
+        "usage": {
+          "prompt_tokens": 438,
+          "completion_tokens": 94,
+          "total_tokens": 532,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_f9f4fb6dbf"
+      },
+      "id": "chatcmpl-B6Wa2h1TguBNvSag8hHxhZwV2rzLV",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 94,
+        "input_tokens": 438,
+        "total_tokens": 532,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  }
+]
