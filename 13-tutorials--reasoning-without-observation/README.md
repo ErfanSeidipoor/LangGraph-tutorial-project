@@ -9,4 +9,5 @@ Simplify the fine-tuning process. Since the planning data doesn't depend on the 
 The following diagram outlines ReWOO's overall computation graph:
 
 ![Workflow](./rewoo.png)
-![Workflow](./diagram-2.png)
+![Workflow](./rewoo-paper-workflow.png)
+![Workflow](./diagram-1.png)
