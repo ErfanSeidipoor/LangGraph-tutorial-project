@@ -1,0 +1,164 @@
+[
+  {
+    "generateSubjects": {
+      "prompt": "Provide a list of examples related to games. Aim for a comprehensive list, but the number of examples can vary based on the depth and breadth of the topic.",
+      "topic": "games",
+      "subjects": [
+        "Video games",
+        "Board games",
+        "Card games",
+        "Role-playing games",
+        "Sports games",
+        "Puzzle games",
+        "Educational games",
+        "Party games",
+        "Strategy games",
+        "Simulation games",
+        "Adventure games",
+        "Action games",
+        "Casual games",
+        "Trivia games",
+        "Word games",
+        "Arcade games",
+        "Mobile games",
+        "PC games",
+        "Console games",
+        "Virtual reality games",
+        "Augmented reality games"
+      ]
+    }
+  },
+  {
+    "jokes": [
+      "Why did the scarecrow win the party games? Because he was outstanding in his field!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the gamer bring a ladder to the game?\nBecause they wanted to reach the next level!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't augmented reality games ever get lost?\n\nBecause they always have their GPS on point!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't role-playing games ever get lost?\n\nBecause they always have a map!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't virtual reality games ever win an argument? Because they always lose touch with reality!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the puzzle piece go to school?\n\nBecause it wanted to be a little sharper!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the arcade game go to therapy? Because it had too many issues with 'space invaders'!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't poker players get sunburned? Because they always have a good hand!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the board game player bring a ladder to the game night? Because they heard the game had a lot of up and downs!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the console player bring a ladder to the game?\n\nBecause they heard the graphics were on another level!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't mobile games ever get lost?\n\nBecause they always have a map app!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the strategy game player bring a ladder to the game?\n\nBecause they heard the competition was on another level!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the basketball team go to the bank? Because they wanted to get their quarter back!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't adventure game characters ever get lost? Because they always take the 'scenic route' through the plot!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the word game player bring a ladder to the tournament? Because they heard the competition was on another level!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the Sim never get a promotion?\n\nBecause every time they tried to 'Simulate' success, they just ended up stuck in a loop of 'Pause, Play, and Fast Forward!'"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't educational games ever win hide and seek? Because good luck hiding when you're always trying to stand out as a 'smart' choice!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't action game characters ever get lost?\n\nBecause they always have a strong sense of 'direction' and plenty of 'waypoints' to guide them!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't trivia games ever get invited to parties? Because they always bring too many questions!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why did the casual gamer bring a ladder to the game night? Because they heard the games were on another level!"
+    ]
+  },
+  {
+    "jokes": [
+      "Why don't PC gamers play hide and seek?\n\nBecause good luck hiding when their RGB lights are glowing like a disco in the dark!"
+    ]
+  },
+  {
+    "prompt": "Blew are a bunch of jokes about games. select the best one! Return the ID (index) of the best one.  \n Why did the gamer bring a ladder to the game?\nBecause they wanted to reach the next level!\nWhy did the board game player bring a ladder to the game night? Because they heard the game had a lot of up and downs!\nWhy don't poker players get sunburned? Because they always have a good hand!\nWhy don't role-playing games ever get lost?\n\nBecause they always have a map!\nWhy did the basketball team go to the bank? Because they wanted to get their quarter back!\nWhy did the puzzle piece go to school?\n\nBecause it wanted to be a little sharper!\nWhy don't educational games ever win hide and seek? Because good luck hiding when you're always trying to stand out as a 'smart' choice!\nWhy did the scarecrow win the party games? Because he was outstanding in his field!\nWhy did the strategy game player bring a ladder to the game?\n\nBecause they heard the competition was on another level!\nWhy did the Sim never get a promotion?\n\nBecause every time they tried to 'Simulate' success, they just ended up stuck in a loop of 'Pause, Play, and Fast Forward!'\nWhy don't adventure game characters ever get lost? Because they always take the 'scenic route' through the plot!\nWhy don't action game characters ever get lost?\n\nBecause they always have a strong sense of 'direction' and plenty of 'waypoints' to guide them!\nWhy did the casual gamer bring a ladder to the game night? Because they heard the games were on another level!\nWhy don't trivia games ever get invited to parties? Because they always bring too many questions!\nWhy did the word game player bring a ladder to the tournament? Because they heard the competition was on another level!\nWhy did the arcade game go to therapy? Because it had too many issues with 'space invaders'!\nWhy don't mobile games ever get lost?\n\nBecause they always have a map app!\nWhy don't PC gamers play hide and seek?\n\nBecause good luck hiding when their RGB lights are glowing like a disco in the dark!\nWhy did the console player bring a ladder to the game?\n\nBecause they heard the graphics were on another level!\nWhy don't virtual reality games ever win an argument? Because they always lose touch with reality!\nWhy don't augmented reality games ever get lost?\n\nBecause they always have their GPS on point!",
+    "state.jokes": [
+      "Why did the gamer bring a ladder to the game?\nBecause they wanted to reach the next level!",
+      "Why did the board game player bring a ladder to the game night? Because they heard the game had a lot of up and downs!",
+      "Why don't poker players get sunburned? Because they always have a good hand!",
+      "Why don't role-playing games ever get lost?\n\nBecause they always have a map!",
+      "Why did the basketball team go to the bank? Because they wanted to get their quarter back!",
+      "Why did the puzzle piece go to school?\n\nBecause it wanted to be a little sharper!",
+      "Why don't educational games ever win hide and seek? Because good luck hiding when you're always trying to stand out as a 'smart' choice!",
+      "Why did the scarecrow win the party games? Because he was outstanding in his field!",
+      "Why did the strategy game player bring a ladder to the game?\n\nBecause they heard the competition was on another level!",
+      "Why did the Sim never get a promotion?\n\nBecause every time they tried to 'Simulate' success, they just ended up stuck in a loop of 'Pause, Play, and Fast Forward!'",
+      "Why don't adventure game characters ever get lost? Because they always take the 'scenic route' through the plot!",
+      "Why don't action game characters ever get lost?\n\nBecause they always have a strong sense of 'direction' and plenty of 'waypoints' to guide them!",
+      "Why did the casual gamer bring a ladder to the game night? Because they heard the games were on another level!",
+      "Why don't trivia games ever get invited to parties? Because they always bring too many questions!",
+      "Why did the word game player bring a ladder to the tournament? Because they heard the competition was on another level!",
+      "Why did the arcade game go to therapy? Because it had too many issues with 'space invaders'!",
+      "Why don't mobile games ever get lost?\n\nBecause they always have a map app!",
+      "Why don't PC gamers play hide and seek?\n\nBecause good luck hiding when their RGB lights are glowing like a disco in the dark!",
+      "Why did the console player bring a ladder to the game?\n\nBecause they heard the graphics were on another level!",
+      "Why don't virtual reality games ever win an argument? Because they always lose touch with reality!",
+      "Why don't augmented reality games ever get lost?\n\nBecause they always have their GPS on point!"
+    ],
+    "id": "0",
+    "bestSelectedJoke": "Why did the gamer bring a ladder to the game?\nBecause they wanted to reach the next level!"
+  }
+]
