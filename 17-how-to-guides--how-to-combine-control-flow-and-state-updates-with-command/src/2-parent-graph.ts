@@ -18,14 +18,15 @@ import * as fs from "fs/promises";
 
   /* ---------------------------------- Nodes --------------------------------- */
 
-  const nodeA = async (state: typeof StateAnnotation.State) => {
-    console.log("Called nodeA");
-    RESULT.push("Called nodeA ");
+  const nodeASubgraph = async (state: typeof StateAnnotation.State) => {
+    console.log("Called nodeASubgraph");
+    RESULT.push("Called nodeASubgraph ");
     return new Command({
       update: {
-        foo: "a",
+        foo: "Sub a",
       },
       goto: Math.random() > 0.5 ? "nodeB" : "nodeC",
+      graph: Command.PARENT,
     });
   };
 
@@ -49,24 +50,29 @@ import * as fs from "fs/promises";
 
   /* ---------------------------------- Graph --------------------------------- */
 
-  const graph = new StateGraph(StateAnnotation)
-    .addNode("nodeA", nodeA, {
-      ends: ["nodeB", "nodeC"],
-    })
+  const subgraph = new StateGraph(StateAnnotation)
+    .addNode("nodeASubgraph", nodeASubgraph)
+    .addEdge("__start__", "nodeASubgraph")
+    .compile();
+
+  const parentGraph = new StateGraph(StateAnnotation)
+    .addNode("subgraph", subgraph, { ends: ["nodeB", "nodeC"] })
     .addNode("nodeB", nodeB)
     .addNode("nodeC", nodeC)
-    .addEdge(START, "nodeA")
-    .addEdge("nodeB", END)
-    .addEdge("nodeC", END)
+    .addEdge("__start__", "subgraph")
     .compile();
 
   // prettier-ignore
-  const buffer = (await (await graph.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
-  fs.writeFile("./diagram-1.png", Buffer.from(await buffer));
+  try {
+    const buffer = (await (await parentGraph.getGraphAsync()).drawMermaidPng({})).arrayBuffer();
+    await fs.writeFile("./diagram-1.png", Buffer.from(await buffer));
+  } catch (error) {
+    console.error("Failed to fetch and write the diagram:", error);
+  }
 
   /* --------------------------------- Invoke --------------------------------- */
 
-  await graph.invoke({ foo: "" });
+  await parentGraph.invoke({ foo: "" });
   // prettier-ignore
-  fs.writeFile("RESULT.json",JSON.stringify(RESULT, null, 2),"utf8");
+  fs.writeFile("RESULT-2.json",JSON.stringify(RESULT, null, 2),"utf8");
 })();

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "index": "node -r ts-node/register --env-file=.env src/index.ts"
+    "simple-graph": "node -r ts-node/register src/1-simple-graph.ts",
+    "parent-graph": "node -r ts-node/register src/2-parent-graph.ts"
   },
   "keywords": [],
   "author": "",
