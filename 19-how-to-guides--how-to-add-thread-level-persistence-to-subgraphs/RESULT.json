@@ -1,0 +1,82 @@
+[
+  {
+    "node1": {
+      "foo": "hi! foo"
+    }
+  },
+  {
+    "subgraphNode1": {
+      "bar": "bar"
+    }
+  },
+  {
+    "subgraphNode2": {
+      "foo": "hi! foobar"
+    }
+  },
+  {
+    "currentState": {
+      "foo": "hi! foobar"
+    },
+    "stateWithSubgraph": {
+      "values": {
+        "foo": "hi! foo"
+      },
+      "next": [
+        "node2"
+      ],
+      "tasks": [
+        {
+          "id": "6ff9ebaa-d8b1-56da-a1e8-26865a76bad2",
+          "name": "node2",
+          "path": [
+            "__pregel_pull",
+            "node2"
+          ],
+          "interrupts": [],
+          "state": {
+            "configurable": {
+              "thread_id": "1",
+              "checkpoint_ns": "node2:6ff9ebaa-d8b1-56da-a1e8-26865a76bad2"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "source": "loop",
+        "writes": {
+          "node1": {
+            "foo": "hi! foo"
+          }
+        },
+        "step": 1,
+        "parents": {}
+      },
+      "config": {
+        "configurable": {
+          "thread_id": "1",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1effc00d-95f8-6490-8001-d6884d4c4dac"
+        }
+      },
+      "createdAt": "2025-03-08T09:36:44.889Z",
+      "parentConfig": {
+        "configurable": {
+          "thread_id": "1",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1effc00d-95ec-6140-8000-8c7512f99ba4"
+        }
+      }
+    },
+    "subgraphConfig": {
+      "configurable": {
+        "thread_id": "1",
+        "checkpoint_ns": "node2:6ff9ebaa-d8b1-56da-a1e8-26865a76bad2"
+      }
+    },
+    "subGraphState": {
+      "foo": "hi! foobar",
+      "bar": "bar"
+    }
+  }
+]
