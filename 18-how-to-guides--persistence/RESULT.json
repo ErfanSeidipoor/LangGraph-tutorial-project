@@ -1,0 +1,53 @@
+[
+  "Cold, with a low of 13 ℃",
+  [
+    "human",
+    " >> ",
+    "Hi I'm Yu, nice to meet you."
+  ],
+  [
+    "ai",
+    " >> ",
+    "Hello Yu! It's nice to meet you too. How can I assist you today?"
+  ],
+  [
+    "human",
+    " >> ",
+    "Remember my name?"
+  ],
+  [
+    "ai",
+    " >> ",
+    "I don't have the capability to remember names or any other personal information between interactions. You can tell me your name again if you'd like!"
+  ],
+  [
+    "human",
+    " >> ",
+    "Hi I'm Jo, nice to meet you."
+  ],
+  [
+    "ai",
+    " >> ",
+    "Hello Jo! Nice to meet you too. How can I assist you today?"
+  ],
+  [
+    "human",
+    " >> ",
+    "Remember my name?"
+  ],
+  [
+    "ai",
+    " >> ",
+    "Yes, your name is Jo. If there's anything specific you'd like to discuss or need help with, feel free to let me know!"
+  ],
+  [
+    "human",
+    " >> ",
+    "you forgot?"
+  ],
+  [
+    "ai",
+    " >> ",
+    "Could you please provide more context or details about what you think I may have forgotten? I'll do my best to assist you!"
+  ]
+]
