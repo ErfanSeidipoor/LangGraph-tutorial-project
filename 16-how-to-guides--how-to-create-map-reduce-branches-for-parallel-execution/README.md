@@ -11,5 +11,4 @@ Consider this example: given a general topic from the user, generate a list of r
 LangGraph addresses these challenges through its Send API. By utilizing conditional edges, Send can distribute different states (e.g., subjects) to multiple instances of a node (e.g., joke generation). Importantly, the sent state can differ from the core graph's state, allowing for flexible and dynamic workflow management.
 
 ![Workflow](./diagram.png)
-![Workflow](./diagram-2.png)
-![Workflow](./diagram-3.png)
+![Workflow](./diagram-1.png)
