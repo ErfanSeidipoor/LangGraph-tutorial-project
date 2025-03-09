@@ -1,0 +1,358 @@
+[
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what's the weather in sf",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "7c7a3f6e-9f46-45a7-99d7-edaf79244949"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "",
+          "additional_kwargs": {
+            "tool_calls": [
+              {
+                "id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ",
+                "type": "function",
+                "function": {
+                  "name": "get_weather",
+                  "arguments": "{\"city\":\"sf\"}"
+                }
+              }
+            ]
+          },
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 57,
+              "completionTokens": 15,
+              "totalTokens": 72
+            },
+            "finish_reason": "tool_calls",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 57,
+              "completion_tokens": 15,
+              "total_tokens": 72,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-B93qebpb7DD7fUmk8fmYZbGHJf6qu",
+          "tool_calls": [
+            {
+              "name": "get_weather",
+              "args": {
+                "city": "sf"
+              },
+              "type": "tool_call",
+              "id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 15,
+            "input_tokens": 57,
+            "total_tokens": 72,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's always sunny in sf",
+          "tool_call_id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ",
+          "name": "get_weather",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "b1874161-40f2-4175-94ba-00e9a5de5b7e"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "It's always sunny in SF!",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 84,
+              "completionTokens": 8,
+              "totalTokens": 92
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 84,
+              "completion_tokens": 8,
+              "total_tokens": 92,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-B93qeaTE2NP4BfSo4aaLWTLu7jtNE",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 8,
+            "input_tokens": 84,
+            "total_tokens": 92,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "v": 1,
+    "id": "1effcaa7-17ef-6400-8003-981a64ec9551",
+    "ts": "2025-03-09T05:50:45.056Z",
+    "pending_sends": [],
+    "versions_seen": {
+      "agent": {
+        "tools": 4,
+        "__start__:agent": 2
+      },
+      "tools": {
+        "branch:agent:condition:tools": 3
+      },
+      "__input__": {},
+      "__start__": {
+        "__start__": 1
+      }
+    },
+    "channel_versions": {
+      "agent": 5,
+      "tools": 5,
+      "messages": 5,
+      "__start__": 2,
+      "__start__:agent": 3,
+      "branch:agent:condition:tools": 4
+    },
+    "channel_values": {
+      "agent": "agent",
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "what's the weather in sf",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "7c7a3f6e-9f46-45a7-99d7-edaf79244949"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "",
+            "additional_kwargs": {
+              "tool_calls": [
+                {
+                  "id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ",
+                  "type": "function",
+                  "function": {
+                    "name": "get_weather",
+                    "arguments": "{\"city\":\"sf\"}"
+                  }
+                }
+              ]
+            },
+            "response_metadata": {
+              "tokenUsage": {
+                "promptTokens": 57,
+                "completionTokens": 15,
+                "totalTokens": 72
+              },
+              "finish_reason": "tool_calls",
+              "model_name": "gpt-4o-2024-08-06",
+              "usage": {
+                "prompt_tokens": 57,
+                "completion_tokens": 15,
+                "total_tokens": 72,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "system_fingerprint": "fp_eb9dce56a8"
+            },
+            "id": "chatcmpl-B93qebpb7DD7fUmk8fmYZbGHJf6qu",
+            "tool_calls": [
+              {
+                "name": "get_weather",
+                "args": {
+                  "city": "sf"
+                },
+                "type": "tool_call",
+                "id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "output_tokens": 15,
+              "input_tokens": 57,
+              "total_tokens": 72,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "ToolMessage"
+          ],
+          "kwargs": {
+            "content": "It's always sunny in sf",
+            "tool_call_id": "call_EsJNR9jKq3rXzcCKK4eEvVyZ",
+            "name": "get_weather",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "b1874161-40f2-4175-94ba-00e9a5de5b7e"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "It's always sunny in SF!",
+            "additional_kwargs": {},
+            "response_metadata": {
+              "tokenUsage": {
+                "promptTokens": 84,
+                "completionTokens": 8,
+                "totalTokens": 92
+              },
+              "finish_reason": "stop",
+              "model_name": "gpt-4o-2024-08-06",
+              "usage": {
+                "prompt_tokens": 84,
+                "completion_tokens": 8,
+                "total_tokens": 92,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "system_fingerprint": "fp_eb9dce56a8"
+            },
+            "id": "chatcmpl-B93qeaTE2NP4BfSo4aaLWTLu7jtNE",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "output_tokens": 8,
+              "input_tokens": 84,
+              "total_tokens": 92,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]
