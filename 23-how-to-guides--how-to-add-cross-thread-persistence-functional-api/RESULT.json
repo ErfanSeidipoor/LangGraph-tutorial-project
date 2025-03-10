@@ -1,0 +1,193 @@
+[
+  {
+    "config": {
+      "configurable": {
+        "thread_id": "1"
+      },
+      "streamMode": "values"
+    },
+    "chunk": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "Hello, Bob! How can I assist you today?",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 33,
+            "completionTokens": 12,
+            "totalTokens": 45
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 12,
+            "total_tokens": 45,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-B9PquT1MULMp7SIt2vku7hXJuev4c",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 12,
+          "input_tokens": 33,
+          "total_tokens": 45,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "configurable": {
+        "thread_id": "1"
+      },
+      "streamMode": "values"
+    },
+    "chunk": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "Your username is Bob. If you'd like me to refer to you by a different name, just let me know!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 32,
+            "completionTokens": 24,
+            "totalTokens": 56
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 24,
+            "total_tokens": 56,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_eb9dce56a8"
+        },
+        "id": "chatcmpl-B9PqvlcyVUtInNF1ATBHHpIHpsa6z",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 24,
+          "input_tokens": 32,
+          "total_tokens": 56,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "memories 1": {
+      "data": "Username is Bob"
+    }
+  },
+  {
+    "config": {
+      "configurable": {
+        "thread_id": "1"
+      },
+      "streamMode": "values"
+    },
+    "chunk": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "I'm sorry, but I don't have access to personal information like your name. If you let me know, I’d be happy to use it in our conversation!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 30,
+            "completionTokens": 33,
+            "totalTokens": 63
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 33,
+            "total_tokens": 63,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-B9Pqv4Ho0j9njvYWReiHbHN5EXF51",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 33,
+          "input_tokens": 30,
+          "total_tokens": 63,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  }
+]
