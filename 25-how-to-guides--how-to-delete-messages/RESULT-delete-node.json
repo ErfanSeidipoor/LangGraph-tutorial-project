@@ -1,0 +1,141 @@
+[
+  {
+    "human": "Hi! I'm bob"
+  },
+  {
+    "ai": "Hello, Bob! How can I assist you today?"
+  },
+  {
+    "human": "what's my name?"
+  },
+  {
+    "ai": "Your name is Bob."
+  },
+  {
+    "ai": "Your name is Bob."
+  },
+  "All Messages",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "Hello, Bob! How can I assist you today?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 46,
+          "completionTokens": 13,
+          "totalTokens": 59
+        },
+        "finish_reason": "stop",
+        "model_name": "gpt-4o-2024-08-06",
+        "usage": {
+          "prompt_tokens": 46,
+          "completion_tokens": 13,
+          "total_tokens": 59,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_eb9dce56a8"
+      },
+      "id": "chatcmpl-B9mrTLh77bICsGW9uHnW9htZQKF1X",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 13,
+        "input_tokens": 46,
+        "total_tokens": 59,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "HumanMessage"
+    ],
+    "kwargs": {
+      "content": "what's my name?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "fad92368-e636-4c0c-9773-0befcbfff111"
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "Your name is Bob.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 70,
+          "completionTokens": 7,
+          "totalTokens": 77
+        },
+        "finish_reason": "stop",
+        "model_name": "gpt-4o-2024-08-06",
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 7,
+          "total_tokens": 77,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_eb9dce56a8"
+      },
+      "id": "chatcmpl-B9mrUbCmQydQAQOpTAvm9cMfFL6cQ",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 7,
+        "input_tokens": 70,
+        "total_tokens": 77,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  }
+]
