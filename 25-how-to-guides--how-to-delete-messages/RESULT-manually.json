@@ -3,13 +3,13 @@
     "human": "Hi! I'm bob"
   },
   {
-    "ai": "Hello Bob! How can I assist you today?"
+    "ai": "Hello, Bob! How can I assist you today?"
   },
   {
     "human": "what's my name?"
   },
   {
-    "ai": "Your name is Bob. Is there anything else you'd like to know or discuss today?"
+    "ai": "Your name is Bob. How can I assist you further?"
   },
   "All Messages",
   {
@@ -21,7 +21,7 @@
       "HumanMessage"
     ],
     "kwargs": {
-      "id": "073f65a2-d20b-404f-a7b8-f1c9df18d213",
+      "id": "bc23b264-22da-4621-b7c1-7afb1b08304a",
       "content": "Hi! I'm bob",
       "additional_kwargs": {},
       "response_metadata": {}
@@ -36,20 +36,20 @@
       "AIMessage"
     ],
     "kwargs": {
-      "content": "Hello Bob! How can I assist you today?",
+      "content": "Hello, Bob! How can I assist you today?",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
           "promptTokens": 46,
-          "completionTokens": 12,
-          "totalTokens": 58
+          "completionTokens": 13,
+          "totalTokens": 59
         },
         "finish_reason": "stop",
         "model_name": "gpt-4o-2024-08-06",
         "usage": {
           "prompt_tokens": 46,
-          "completion_tokens": 12,
-          "total_tokens": 58,
+          "completion_tokens": 13,
+          "total_tokens": 59,
           "prompt_tokens_details": {
             "cached_tokens": 0,
             "audio_tokens": 0
@@ -63,13 +63,13 @@
         },
         "system_fingerprint": "fp_eb9dce56a8"
       },
-      "id": "chatcmpl-B9n0q5MfFkHCo5Yz43GJcARFbKHGT",
+      "id": "chatcmpl-B9nGp2wkfKfvgcYLycp9j9b0HsxQA",
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 12,
+        "output_tokens": 13,
         "input_tokens": 46,
-        "total_tokens": 58,
+        "total_tokens": 59,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0
@@ -90,7 +90,7 @@
       "HumanMessage"
     ],
     "kwargs": {
-      "id": "fd5abcc6-c76d-4355-ae8a-16bcac4471ef",
+      "id": "d35a248f-7d78-4452-ad30-5d7cf91d7492",
       "content": "what's my name?",
       "additional_kwargs": {},
       "response_metadata": {}
@@ -105,20 +105,20 @@
       "AIMessage"
     ],
     "kwargs": {
-      "content": "Your name is Bob. Is there anything else you'd like to know or discuss today?",
+      "content": "Your name is Bob. How can I assist you further?",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
-          "promptTokens": 69,
-          "completionTokens": 19,
-          "totalTokens": 88
+          "promptTokens": 70,
+          "completionTokens": 14,
+          "totalTokens": 84
         },
         "finish_reason": "stop",
         "model_name": "gpt-4o-2024-08-06",
         "usage": {
-          "prompt_tokens": 69,
-          "completion_tokens": 19,
-          "total_tokens": 88,
+          "prompt_tokens": 70,
+          "completion_tokens": 14,
+          "total_tokens": 84,
           "prompt_tokens_details": {
             "cached_tokens": 0,
             "audio_tokens": 0
@@ -132,13 +132,13 @@
         },
         "system_fingerprint": "fp_eb9dce56a8"
       },
-      "id": "chatcmpl-B9n0s9ePVaSyvq7StCPHR3MuFUPN9",
+      "id": "chatcmpl-B9nGqPGxOXKoPDMOAcsmDkimZXyW7",
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 19,
-        "input_tokens": 69,
-        "total_tokens": 88,
+        "output_tokens": 14,
+        "input_tokens": 70,
+        "total_tokens": 84,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0
@@ -153,24 +153,9 @@
   "messages.length: 4",
   "Removing the first message",
   {
-    "id": "073f65a2-d20b-404f-a7b8-f1c9df18d213"
+    "id": "bc23b264-22da-4621-b7c1-7afb1b08304a"
   },
-  "messages.length: 4",
-  {
-    "lc": 1,
-    "type": "constructor",
-    "id": [
-      "langchain_core",
-      "messages",
-      "HumanMessage"
-    ],
-    "kwargs": {
-      "id": "073f65a2-d20b-404f-a7b8-f1c9df18d213",
-      "content": "Hi! I'm bob",
-      "additional_kwargs": {},
-      "response_metadata": {}
-    }
-  },
+  "messages.length: 3",
   {
     "lc": 1,
     "type": "constructor",
@@ -180,20 +165,20 @@
       "AIMessage"
     ],
     "kwargs": {
-      "content": "Hello Bob! How can I assist you today?",
+      "content": "Hello, Bob! How can I assist you today?",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
           "promptTokens": 46,
-          "completionTokens": 12,
-          "totalTokens": 58
+          "completionTokens": 13,
+          "totalTokens": 59
         },
         "finish_reason": "stop",
         "model_name": "gpt-4o-2024-08-06",
         "usage": {
           "prompt_tokens": 46,
-          "completion_tokens": 12,
-          "total_tokens": 58,
+          "completion_tokens": 13,
+          "total_tokens": 59,
           "prompt_tokens_details": {
             "cached_tokens": 0,
             "audio_tokens": 0
@@ -207,13 +192,13 @@
         },
         "system_fingerprint": "fp_eb9dce56a8"
       },
-      "id": "chatcmpl-B9n0q5MfFkHCo5Yz43GJcARFbKHGT",
+      "id": "chatcmpl-B9nGp2wkfKfvgcYLycp9j9b0HsxQA",
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 12,
+        "output_tokens": 13,
         "input_tokens": 46,
-        "total_tokens": 58,
+        "total_tokens": 59,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0
@@ -234,7 +219,7 @@
       "HumanMessage"
     ],
     "kwargs": {
-      "id": "fd5abcc6-c76d-4355-ae8a-16bcac4471ef",
+      "id": "d35a248f-7d78-4452-ad30-5d7cf91d7492",
       "content": "what's my name?",
       "additional_kwargs": {},
       "response_metadata": {}
@@ -249,20 +234,20 @@
       "AIMessage"
     ],
     "kwargs": {
-      "content": "Your name is Bob. Is there anything else you'd like to know or discuss today?",
+      "content": "Your name is Bob. How can I assist you further?",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
-          "promptTokens": 69,
-          "completionTokens": 19,
-          "totalTokens": 88
+          "promptTokens": 70,
+          "completionTokens": 14,
+          "totalTokens": 84
         },
         "finish_reason": "stop",
         "model_name": "gpt-4o-2024-08-06",
         "usage": {
-          "prompt_tokens": 69,
-          "completion_tokens": 19,
-          "total_tokens": 88,
+          "prompt_tokens": 70,
+          "completion_tokens": 14,
+          "total_tokens": 84,
           "prompt_tokens_details": {
             "cached_tokens": 0,
             "audio_tokens": 0
@@ -276,13 +261,13 @@
         },
         "system_fingerprint": "fp_eb9dce56a8"
       },
-      "id": "chatcmpl-B9n0s9ePVaSyvq7StCPHR3MuFUPN9",
+      "id": "chatcmpl-B9nGqPGxOXKoPDMOAcsmDkimZXyW7",
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 19,
-        "input_tokens": 69,
-        "total_tokens": 88,
+        "output_tokens": 14,
+        "input_tokens": 70,
+        "total_tokens": 84,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0

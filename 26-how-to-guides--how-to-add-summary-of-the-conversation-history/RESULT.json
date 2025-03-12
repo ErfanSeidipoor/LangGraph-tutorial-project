@@ -1,0 +1,293 @@
+[
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "id": "8f5dfb25-dbb7-4889-8861-1af301456f6a",
+          "content": "hi! I'm bob",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "Hello Bob! How can I assist you today?",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 11,
+              "completionTokens": 11,
+              "totalTokens": 22
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 11,
+              "completion_tokens": 11,
+              "total_tokens": 22,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-BA986ZcTedZUAXFiyvAk023a0CINu",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 11,
+            "input_tokens": 11,
+            "total_tokens": 22,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      }
+    ],
+    "summary": ""
+  },
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "id": "8f5dfb25-dbb7-4889-8861-1af301456f6a",
+          "content": "hi! I'm bob",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "Hello Bob! How can I assist you today?",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 11,
+              "completionTokens": 11,
+              "totalTokens": 22
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 11,
+              "completion_tokens": 11,
+              "total_tokens": 22,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-BA986ZcTedZUAXFiyvAk023a0CINu",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 11,
+            "input_tokens": 11,
+            "total_tokens": 22,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "id": "fcfd8c89-4b99-4bd1-a05b-828dee94bb1d",
+          "content": "What did I sat my name was?",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "You said your name was Bob.",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 37,
+              "completionTokens": 8,
+              "totalTokens": 45
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 37,
+              "completion_tokens": 8,
+              "total_tokens": 45,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-BA9867VkxoIo5JXyAZ0DVdQ2klmSV",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 8,
+            "input_tokens": 37,
+            "total_tokens": 45,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      }
+    ],
+    "summary": ""
+  },
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "id": "be557ea4-7bda-4848-a5d4-5a7abd7940df",
+          "content": "i like the celtics!",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "That's great! The Boston Celtics have a rich history and a passionate fan base. Are you excited about their upcoming season or is there something specific you like about the team?",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 59,
+              "completionTokens": 35,
+              "totalTokens": 94
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 59,
+              "completion_tokens": 35,
+              "total_tokens": 94,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_eb9dce56a8"
+          },
+          "id": "chatcmpl-BA987d5peelNkzBFJEi7rVIgAnJhD",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 35,
+            "input_tokens": 59,
+            "total_tokens": 94,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      }
+    ],
+    "summary": "In the conversation, Bob introduces himself and then expresses his liking for the Boston Celtics basketball team. The assistant acknowledges Bob's name and enthusiasm for the Celtics, mentioning the team's rich history and fan base while prompting Bob for further discussion about his interest in the Celtics."
+  }
+]

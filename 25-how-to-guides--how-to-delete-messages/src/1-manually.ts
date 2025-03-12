@@ -78,7 +78,7 @@ import { v4 as uuidv4 } from "uuid";
 
   /* -------------------------------- workflow -------------------------------- */
 
-  const workflow = new StateGraph(AgentState)
+  const workflow = new StateGraph(MessagesAnnotation)
     .addNode("callModel", callModel)
     .addNode("toolNode", toolNode)
     .addConditionalEdges("callModel", shouldContinue, ["toolNode", END])
