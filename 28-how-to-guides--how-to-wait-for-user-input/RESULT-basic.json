@@ -1,0 +1,25 @@
+[
+  {},
+  {
+    "__interrupt__": [
+      {
+        "value": "Please provide feedback",
+        "when": "during",
+        "resumable": true,
+        "ns": [
+          "humanFeedback:c3035bf0-a76c-53dc-af70-6823dfa45f35"
+        ]
+      }
+    ]
+  },
+  {
+    "humanFeedback": {
+      "userFeedback": "go to step 3! "
+    }
+  },
+  {},
+  {
+    "input": "hello world",
+    "userFeedback": "go to step 3! "
+  }
+]
