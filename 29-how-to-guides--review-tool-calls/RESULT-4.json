@@ -1,0 +1,272 @@
+[
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_f2KFVP89d3gWAj8MQYhEEwML",
+              "type": "function",
+              "function": {
+                "name": "weatherSearchTool",
+                "arguments": "{\"city\":\"San Francisco\"}"
+              }
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 50,
+            "completionTokens": 17,
+            "totalTokens": 67
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 17,
+            "total_tokens": 67,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMFAQ1NEDaZRY1d099Wuwdd8bS5",
+        "tool_calls": [
+          {
+            "name": "weatherSearchTool",
+            "args": {
+              "city": "San Francisco"
+            },
+            "type": "tool_call",
+            "id": "call_f2KFVP89d3gWAj8MQYhEEwML"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 17,
+          "input_tokens": 50,
+          "total_tokens": 67,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge",
+  [
+    "humanReviewNode"
+  ],
+  {
+    "humanReviewNode": {
+      "reviewAction": "feedback",
+      "reviewData": "User requested changes: use <city, country> format for location"
+    }
+  },
+  {
+    "goto": "callLlmNode",
+    "update": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "ToolMessage"
+          ],
+          "kwargs": {
+            "name": "weatherSearchTool",
+            "content": "User requested changes: use <city, country> format for location",
+            "tool_call_id": "call_f2KFVP89d3gWAj8MQYhEEwML",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "aa48c312-e213-440e-ac65-81379cdb5e5e"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_WsDJwWkP4PM8FZAuCajHfYQ4",
+              "type": "function",
+              "function": {
+                "name": "weatherSearchTool",
+                "arguments": "{\"city\":\"San Francisco, US\"}"
+              }
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 88,
+            "completionTokens": 19,
+            "totalTokens": 107
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 88,
+            "completion_tokens": 19,
+            "total_tokens": 107,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMFpPUiwOrmK0OwDk6O4bTxdP1P",
+        "tool_calls": [
+          {
+            "name": "weatherSearchTool",
+            "args": {
+              "city": "San Francisco, US"
+            },
+            "type": "tool_call",
+            "id": "call_WsDJwWkP4PM8FZAuCajHfYQ4"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 19,
+          "input_tokens": 88,
+          "total_tokens": 107,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge",
+  [
+    "humanReviewNode"
+  ],
+  {
+    "humanReviewNode": {
+      "reviewAction": "continue"
+    }
+  },
+  {
+    "goto": "toolNode"
+  },
+  {
+    "toolNode": [
+      {
+        "name": "weatherSearchTool",
+        "args": {
+          "city": "San Francisco, US"
+        },
+        "type": "tool_call",
+        "id": "call_WsDJwWkP4PM8FZAuCajHfYQ4"
+      }
+    ]
+  },
+  {
+    "tool > weatherSearch": "San Francisco, US"
+  },
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "The weather in San Francisco, US is currently sunny!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 117,
+            "completionTokens": 13,
+            "totalTokens": 130
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 117,
+            "completion_tokens": 13,
+            "total_tokens": 130,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMGKto7cFc1XfwapyIPvuPonnGx",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 13,
+          "input_tokens": 117,
+          "total_tokens": 130,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge"
+]

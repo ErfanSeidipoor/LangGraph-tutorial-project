@@ -1,0 +1,162 @@
+[
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_rcZtYoN0qen9aF0dPaiFl7hn",
+              "type": "function",
+              "function": {
+                "name": "weatherSearchTool",
+                "arguments": "{\"city\":\"SF\"}"
+              }
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 50,
+            "completionTokens": 16,
+            "totalTokens": 66
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 16,
+            "total_tokens": 66,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMC8y5T3dQvZKidwfNCQzDYxvhK",
+        "tool_calls": [
+          {
+            "name": "weatherSearchTool",
+            "args": {
+              "city": "SF"
+            },
+            "type": "tool_call",
+            "id": "call_rcZtYoN0qen9aF0dPaiFl7hn"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 16,
+          "input_tokens": 50,
+          "total_tokens": 66,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge",
+  [
+    "humanReviewNode"
+  ],
+  {
+    "humanReviewNode": {
+      "reviewAction": "continue"
+    }
+  },
+  {
+    "goto": "toolNode"
+  },
+  {
+    "toolNode": [
+      {
+        "name": "weatherSearchTool",
+        "args": {
+          "city": "SF"
+        },
+        "type": "tool_call",
+        "id": "call_rcZtYoN0qen9aF0dPaiFl7hn"
+      }
+    ]
+  },
+  {
+    "tool > weatherSearch": "SF"
+  },
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "The weather in San Francisco is currently sunny!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 76,
+            "completionTokens": 11,
+            "totalTokens": 87
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 76,
+            "completion_tokens": 11,
+            "total_tokens": 87,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMDCW8ppRBnaqJ5NckpDMQmPzmk",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 11,
+          "input_tokens": 76,
+          "total_tokens": 87,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge"
+]

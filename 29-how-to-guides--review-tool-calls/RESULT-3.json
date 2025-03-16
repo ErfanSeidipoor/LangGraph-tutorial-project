@@ -1,0 +1,182 @@
+[
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_UpQX1r78CJpBDxKBdKaO7VrV",
+              "type": "function",
+              "function": {
+                "name": "weatherSearchTool",
+                "arguments": "{\"city\":\"San Francisco\"}"
+              }
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 50,
+            "completionTokens": 17,
+            "totalTokens": 67
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 17,
+            "total_tokens": 67,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMDFH8HtLCCT3z99qcTBahwvTlP",
+        "tool_calls": [
+          {
+            "name": "weatherSearchTool",
+            "args": {
+              "city": "San Francisco"
+            },
+            "type": "tool_call",
+            "id": "call_UpQX1r78CJpBDxKBdKaO7VrV"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 17,
+          "input_tokens": 50,
+          "total_tokens": 67,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge",
+  [
+    "humanReviewNode"
+  ],
+  {
+    "humanReviewNode": {
+      "reviewAction": "update",
+      "reviewData": {
+        "city": "San Francisco"
+      }
+    }
+  },
+  {
+    "goto": "toolNode",
+    "update": {
+      "messages": [
+        {
+          "role": "ai",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_UpQX1r78CJpBDxKBdKaO7VrV",
+              "name": "weatherSearchTool",
+              "args": {
+                "city": "San Francisco"
+              }
+            }
+          ],
+          "id": "chatcmpl-BBbMDFH8HtLCCT3z99qcTBahwvTlP"
+        }
+      ]
+    }
+  },
+  {
+    "toolNode": [
+      {
+        "id": "call_UpQX1r78CJpBDxKBdKaO7VrV",
+        "name": "weatherSearchTool",
+        "args": {
+          "city": "San Francisco"
+        }
+      }
+    ]
+  },
+  {
+    "tool > weatherSearch": "San Francisco"
+  },
+  {
+    "callLlmNode": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain_core",
+        "messages",
+        "AIMessage"
+      ],
+      "kwargs": {
+        "content": "The weather in San Francisco is currently Sunny!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 77,
+            "completionTokens": 11,
+            "totalTokens": 88
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-2024-08-06",
+          "usage": {
+            "prompt_tokens": 77,
+            "completion_tokens": 11,
+            "total_tokens": 88,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_f9f4fb6dbf"
+        },
+        "id": "chatcmpl-BBbMEtoqqlGHSd9E1zOZj8eW6Tltc",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 11,
+          "input_tokens": 77,
+          "total_tokens": 88,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    }
+  },
+  "routeAfterLlmEdge"
+]
