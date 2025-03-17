@@ -72,6 +72,16 @@ import * as fs from "fs/promises";
 
   console.log("---GRAPH INTERRUPTED---");
 
+  const currState = await graph.getState(graphStateConfig);
+  console.log("Current state", currState.values);
+  RESULT.push({ "Current state": currState.values });
+
+  await graph.updateState(graphStateConfig, { input: "hello universe!" });
+
+  const updatedState = await graph.getState(graphStateConfig);
+  console.log("Updated state", updatedState.values);
+  RESULT.push({ "Updated state": updatedState.values });
+
   for await (const event of await graph.stream(null, graphStateConfig)) {
     console.log(`--- ${event.input} ---`);
   }

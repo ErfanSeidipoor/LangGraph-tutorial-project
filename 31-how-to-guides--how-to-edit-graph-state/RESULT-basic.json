@@ -1,0 +1,15 @@
+[
+  "---Step 1---",
+  "---Step 2---",
+  {
+    "Current state": {
+      "input": "hello world"
+    }
+  },
+  {
+    "Updated state": {
+      "input": "hello universe!"
+    }
+  },
+  "---Step 3---"
+]
