@@ -1,0 +1,60 @@
+[
+  "Four",
+  "score",
+  "and",
+  "seven",
+  "years",
+  "ago",
+  "our",
+  "fathers",
+  "...",
+  [
+    "custom",
+    "Four"
+  ],
+  [
+    "custom",
+    "score"
+  ],
+  [
+    "custom",
+    "and"
+  ],
+  [
+    "custom",
+    "seven"
+  ],
+  [
+    "custom",
+    "years"
+  ],
+  [
+    "custom",
+    "ago"
+  ],
+  [
+    "custom",
+    "our"
+  ],
+  [
+    "custom",
+    "fathers"
+  ],
+  [
+    "custom",
+    "..."
+  ],
+  [
+    "updates",
+    {
+      "model": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Four score and seven years ago our fathers ..."
+          }
+        ]
+      }
+    }
+  ]
+]

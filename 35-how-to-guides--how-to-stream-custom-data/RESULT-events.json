@@ -1,0 +1,339 @@
+[
+  {
+    "name": "LangGraph",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "__start__",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "ChannelWrite<...>",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "ChannelWrite<...>",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      },
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  },
+  {
+    "name": "ChannelWrite<__start__:model>",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "ChannelWrite<__start__:model>",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      },
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  },
+  {
+    "name": "__start__",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      },
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What are you thinking about?"
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  },
+  {
+    "name": "model",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "What are you thinking about?",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "67dfde5b-75d9-4959-a599-b0d6c89bffeb"
+            }
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "Four"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "score"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "and"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "seven"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "years"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "ago"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "our"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "fathers"
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "my_custom_event",
+    "data": {
+      "chunk": "..."
+    },
+    "event": "on_custom_event"
+  },
+  {
+    "name": "ChannelWrite<...,model>",
+    "data": {
+      "input": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Four score and seven years ago our fathers ..."
+          }
+        ]
+      }
+    },
+    "event": "on_chain_start"
+  },
+  {
+    "name": "ChannelWrite<...,model>",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Four score and seven years ago our fathers ..."
+          }
+        ]
+      },
+      "input": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Four score and seven years ago our fathers ..."
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  },
+  {
+    "name": "model",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Four score and seven years ago our fathers ..."
+          }
+        ]
+      },
+      "input": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "What are you thinking about?",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "67dfde5b-75d9-4959-a599-b0d6c89bffeb"
+            }
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  },
+  {
+    "name": "LangGraph",
+    "data": {
+      "chunk": {
+        "model": {
+          "messages": [
+            {
+              "role": "assistant",
+              "content": "Four score and seven years ago our fathers ..."
+            }
+          ]
+        }
+      }
+    },
+    "event": "on_chain_stream"
+  },
+  {
+    "name": "LangGraph",
+    "data": {
+      "output": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "What are you thinking about?",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "67dfde5b-75d9-4959-a599-b0d6c89bffeb"
+            }
+          },
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "AIMessage"
+            ],
+            "kwargs": {
+              "content": "Four score and seven years ago our fathers ...",
+              "tool_calls": [],
+              "invalid_tool_calls": [],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "35157f0b-5a7a-4d78-b2e7-f9374d9b96a9"
+            }
+          }
+        ]
+      }
+    },
+    "event": "on_chain_end"
+  }
+]

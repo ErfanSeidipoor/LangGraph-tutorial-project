@@ -1,0 +1,1067 @@
+[
+  "------ .stream( { streamMode: \"messages\" }) ------",
+  {
+    "ai": ""
+  },
+  {
+    "ai": "{\""
+  },
+  {
+    "ai": "query"
+  },
+  {
+    "ai": "\":\""
+  },
+  {
+    "ai": "current"
+  },
+  {
+    "ai": " weather"
+  },
+  {
+    "ai": " in"
+  },
+  {
+    "ai": " Nepal"
+  },
+  {
+    "ai": "\"}"
+  },
+  {
+    "ai": ""
+  },
+  {
+    "tool": "Cold, with a low of 3℃"
+  },
+  {
+    "ai": ""
+  },
+  {
+    "ai": "The"
+  },
+  {
+    "ai": " current"
+  },
+  {
+    "ai": " weather"
+  },
+  {
+    "ai": " in"
+  },
+  {
+    "ai": " Nepal"
+  },
+  {
+    "ai": " is"
+  },
+  {
+    "ai": " cold"
+  },
+  {
+    "ai": ","
+  },
+  {
+    "ai": " with"
+  },
+  {
+    "ai": " a"
+  },
+  {
+    "ai": " low"
+  },
+  {
+    "ai": " temperature"
+  },
+  {
+    "ai": " of"
+  },
+  {
+    "ai": " "
+  },
+  {
+    "ai": "3"
+  },
+  {
+    "ai": "℃"
+  },
+  {
+    "ai": "."
+  },
+  {
+    "ai": ""
+  },
+  "------ .streamEvents( { version: \"v2\" }) ------",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "name": "search",
+          "args": "",
+          "id": "call_xnSh5lH2hnsvlvgxqUUplwB0",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "id": "call_xnSh5lH2hnsvlvgxqUUplwB0",
+            "type": "function",
+            "function": {
+              "name": "search",
+              "arguments": ""
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [
+        {
+          "name": "search",
+          "args": {},
+          "id": "call_xnSh5lH2hnsvlvgxqUUplwB0",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": "{\"",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": "{\""
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": "{\"",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": "query",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": "query"
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": "query",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": "\":\"",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": "\":\""
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": "\":\"",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": "current",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": "current"
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": "current",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": " weather",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": " weather"
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": " weather",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [
+        {
+          "args": "\"}",
+          "index": 0,
+          "type": "tool_call_chunk"
+        }
+      ],
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 0,
+            "function": {
+              "arguments": "\"}"
+            }
+          }
+        ]
+      },
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": [
+        {
+          "args": "\"}",
+          "error": "Malformed args.",
+          "type": "invalid_tool_call"
+        }
+      ]
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3u41y8zIBxEU2tovvYKzR5d1FQ",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "Today's",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " weather",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " is",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " cold",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": ",",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " with",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " a",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " low",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " of",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " ",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "3",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "℃",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": ".",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " If",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " you",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " need",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " more",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " specific",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " details",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " or",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " a",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " forecast",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " for",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " a",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " particular",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " location",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": ",",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " let",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " me",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": " know",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "!",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessageChunk"
+    ],
+    "kwargs": {
+      "content": "",
+      "tool_call_chunks": [],
+      "additional_kwargs": {},
+      "id": "chatcmpl-BCK3v4BCEMInZnjswfcPiE55eYYs2",
+      "response_metadata": {
+        "usage": {}
+      },
+      "tool_calls": [],
+      "invalid_tool_calls": []
+    }
+  }
+]
