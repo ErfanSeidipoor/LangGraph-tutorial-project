@@ -1,0 +1,232 @@
+[
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 60 degrees and foggy.",
+          "tool_call_id": "tool_call_id",
+          "name": "get_weather",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "nyc, sf",
+          "tool_call_id": "tool_call_id",
+          "name": "get_coolest_cities",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 60 degrees and foggy.",
+          "tool_call_id": "tool_call_id_2",
+          "name": "get_weather",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      }
+    ]
+  },
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_a7RGCnxOyuQplKJXsYhXpbVc",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"location\":\"San Francisco\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 90,
+          "completionTokens": 16,
+          "totalTokens": 106
+        },
+        "finish_reason": "tool_calls",
+        "model_name": "gpt-4o-mini-2024-07-18",
+        "usage": {
+          "prompt_tokens": 90,
+          "completion_tokens": 16,
+          "total_tokens": 106,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_b8bc95a0ac"
+      },
+      "id": "chatcmpl-BE93kgp1om5TXFcB2exbibqd8SoLt",
+      "tool_calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "location": "San Francisco"
+          },
+          "type": "tool_call",
+          "id": "call_a7RGCnxOyuQplKJXsYhXpbVc"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 16,
+        "input_tokens": 90,
+        "total_tokens": 106,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "It's 60 degrees and foggy.",
+          "tool_call_id": "call_p94jr3qMXN99eqgQwX0wgMM1",
+          "name": "get_weather",
+          "additional_kwargs": {},
+          "response_metadata": {}
+        }
+      }
+    ]
+  },
+  {
+    "type": "human",
+    "content": "what's the weather in sf?"
+  },
+  {
+    "type": "ai",
+    "content": "",
+    "toolCalls": [
+      {
+        "name": "get_weather",
+        "args": {
+          "location": "San Francisco"
+        },
+        "type": "tool_call",
+        "id": "call_TdvlhLRkP5eEftC55k2g6fub"
+      }
+    ]
+  },
+  {
+    "type": "tool",
+    "content": "It's 60 degrees and foggy."
+  },
+  {
+    "type": "ai",
+    "content": "The weather in San Francisco is currently 60 degrees and foggy.",
+    "toolCalls": []
+  },
+  {
+    "type": "human",
+    "content": "what's the weather in the coolest cities?"
+  },
+  {
+    "type": "ai",
+    "content": "",
+    "toolCalls": [
+      {
+        "name": "get_coolest_cities",
+        "args": {
+          "noOp": ""
+        },
+        "type": "tool_call",
+        "id": "call_zBvgavQNjeDPtgMcJcKqsRks"
+      }
+    ]
+  },
+  {
+    "type": "tool",
+    "content": "nyc, sf"
+  },
+  {
+    "type": "ai",
+    "content": "",
+    "toolCalls": [
+      {
+        "name": "get_weather",
+        "args": {
+          "location": "nyc"
+        },
+        "type": "tool_call",
+        "id": "call_td0R37dkNWBmwbABwFdMFGPE"
+      },
+      {
+        "name": "get_weather",
+        "args": {
+          "location": "sf"
+        },
+        "type": "tool_call",
+        "id": "call_ya0MM5Kwwbn3PaRrhS9kK7A8"
+      }
+    ]
+  },
+  {
+    "type": "tool",
+    "content": "It's 60 degrees and foggy."
+  },
+  {
+    "type": "ai",
+    "content": "The weather in the coolest cities is as follows:\n\n- **New York City (NYC)**: 90 degrees and sunny.\n- **San Francisco (SF)**: 60 degrees and foggy.",
+    "toolCalls": []
+  }
+]
