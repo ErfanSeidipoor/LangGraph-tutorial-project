@@ -1,0 +1,112 @@
+[
+  {
+    "first_agent": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "",
+            "tool_calls": [
+              {
+                "name": "search",
+                "args": {
+                  "query": "what is the weather in sf"
+                },
+                "id": "tool_abcd123"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "additional_kwargs": {},
+            "response_metadata": {}
+          }
+        }
+      ]
+    }
+  },
+  {
+    "action": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "ToolMessage"
+          ],
+          "kwargs": {
+            "content": "Cold, with a low of 13 ℃",
+            "tool_call_id": "tool_abcd123",
+            "name": "search",
+            "additional_kwargs": {},
+            "response_metadata": {}
+          }
+        }
+      ]
+    }
+  },
+  {
+    "agent": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessageChunk"
+          ],
+          "kwargs": {
+            "content": "The current weather in San Francisco is cold, with a low of 13°C.",
+            "additional_kwargs": {},
+            "response_metadata": {
+              "prompt": 0,
+              "completion": 0,
+              "usage": {
+                "prompt_tokens": 104,
+                "completion_tokens": 19,
+                "total_tokens": 123,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "finish_reason": "stop",
+              "system_fingerprint": "fp_6ec83003ad",
+              "model_name": "gpt-4o-2024-08-06"
+            },
+            "tool_call_chunks": [],
+            "id": "chatcmpl-BEVaJOYk1t4fKJyuEIz8XgXWA78PM",
+            "usage_metadata": {
+              "input_tokens": 104,
+              "output_tokens": 19,
+              "total_tokens": 123,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            },
+            "tool_calls": [],
+            "invalid_tool_calls": []
+          }
+        }
+      ]
+    }
+  }
+]
