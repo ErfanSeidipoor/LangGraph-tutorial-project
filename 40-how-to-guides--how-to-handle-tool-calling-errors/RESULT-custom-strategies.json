@@ -1,0 +1,6 @@
+[
+  "HUMAN: \"Write me an incredible haiku about water.\"",
+  "AI: \"\"",
+  "TOOL: \"Error: Received tool input did not match expected schema\\n Please fix your mistakes.\"",
+  "AI: \"Here's a revised attempt at a haiku about water, formatted as requested:\\n\\nSilent flowing stream\\nGently carving ancient stone\\nNature's soothing song\""
+]

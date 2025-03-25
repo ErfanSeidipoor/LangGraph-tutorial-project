@@ -1,0 +1,41 @@
+{
+  "name": "40-how-to-guides--how-to-handle-tool-calling-errors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "basic": "node -r ts-node/register --env-file=.env  src/1-basic.ts",
+    "custom-strategies": "node -r ts-node/register --env-file=.env  src/2-custom-strategies.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/cohere": "^0.3.1",
+    "@langchain/community": "^0.3.19",
+    "@langchain/core": "0.3.13",
+    "@langchain/google-genai": "^0.1.8",
+    "@langchain/google-vertexai": "^0.2.0",
+    "@langchain/langgraph": "^0.2.44",
+    "@langchain/ollama": "^0.1.1",
+    "@langchain/openai": "^0.3.16",
+    "@langchain/textsplitters": "^0.1.0",
+    "canvas": "^3.1.0",
+    "cheerio": "^1.0.0",
+    "langchain": "^0.3.7",
+    "tslab": "^1.0.22",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@langchain/core": "0.3.13"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
