@@ -63,7 +63,7 @@
             "AIMessageChunk"
           ],
           "kwargs": {
-            "content": "The current weather in San Francisco is cold, with a low of 13°C.",
+            "content": "The weather in San Francisco is currently cold, with a low of 13°C.",
             "additional_kwargs": {},
             "response_metadata": {
               "prompt": 0,
@@ -84,11 +84,11 @@
                 }
               },
               "finish_reason": "stop",
-              "system_fingerprint": "fp_6ec83003ad",
+              "system_fingerprint": "fp_898ac29719",
               "model_name": "gpt-4o-2024-08-06"
             },
             "tool_call_chunks": [],
-            "id": "chatcmpl-BEVaJOYk1t4fKJyuEIz8XgXWA78PM",
+            "id": "chatcmpl-BGjEqLVe2ojAQZkW00tSFLm9qtRFa",
             "usage_metadata": {
               "input_tokens": 104,
               "output_tokens": 19,

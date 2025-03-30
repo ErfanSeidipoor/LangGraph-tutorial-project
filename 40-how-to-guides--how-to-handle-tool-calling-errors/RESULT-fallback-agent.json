@@ -1,0 +1,6 @@
+[
+  "HUMAN: \"Write me an incredible haiku about water.\" undefined",
+  "AI: \"\" [{\"name\":\"master_haiku_generator\",\"args\":{\"topic\":[\"water\",\"flow\",\"nature\"]},\"type\":\"tool_call\",\"id\":\"call_55VEl8i9sWUVlTatB0dH4zc6\"}]",
+  "TOOL: \"Gentle streams whisper,  \\nNature's breath in liquid form,  \\nLife's dance, ever flow.\" undefined",
+  "AI: \"Here’s an incredible haiku about water:\\n\\nGentle streams whisper,  \\nNature's breath in liquid form,  \\nLife's dance, ever flow.\" []"
+]

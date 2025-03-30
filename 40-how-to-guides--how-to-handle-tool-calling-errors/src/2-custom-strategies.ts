@@ -3,7 +3,7 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import { tool } from "@langchain/core/tools";
 import { MessagesAnnotation, StateGraph } from "@langchain/langgraph";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
-import { ChatOllama } from "@langchain/ollama";
+import { ChatOpenAI } from "@langchain/openai";
 import * as fs from "fs/promises";
 import { z } from "zod";
 
@@ -17,8 +17,8 @@ import { z } from "zod";
 
   const masterHaikuGenerator = tool(
     async ({ topic }) => {
-      const model = new ChatOllama({
-        model: "llama3.2",
+      const model = new ChatOpenAI({
+        model: "gpt-4o-mini",
         temperature: 0,
       });
       const chain = model.pipe(new StringOutputParser());
@@ -35,8 +35,8 @@ import { z } from "zod";
 
   const toolNode = new ToolNode([masterHaikuGenerator]);
 
-  const model = new ChatOllama({
-    model: "llama3.2",
+  const model = new ChatOpenAI({
+    model: "gpt-4o-mini",
     temperature: 0,
   });
 
@@ -87,8 +87,11 @@ import { z } from "zod";
 
   for (const message of response.messages) {
     const content = JSON.stringify(message.content, null, 2);
-    console.log(`${message.getType().toUpperCase()}: ${content}`);
-    RESULT.push(`${message.getType().toUpperCase()}: ${content}`);
+    const toolCalls = isAIMessage(message)
+      ? JSON.stringify(message.tool_calls)
+      : undefined;
+    console.log(`${message.getType().toUpperCase()}: ${content} ${toolCalls}`);
+    RESULT.push(`${message.getType().toUpperCase()}: ${content} ${toolCalls}`);
   }
 
   /* --------------------------------- Result --------------------------------- */

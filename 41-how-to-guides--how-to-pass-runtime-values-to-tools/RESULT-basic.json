@@ -1,0 +1,22 @@
+[
+  {
+    "type": "object",
+    "properties": {
+      "pets": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "pets"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  },
+  "User: My favorite pet is a terrier. I saw a cute one on Twitter.",
+  "Assistant: I've updated your favorite pet to include terriers! If you have any more preferences or favorites to share, just let me know.",
+  "User: What're my favorite pets and what did I say when I told you about them?",
+  "Assistant: Your favorite pet is a terrier. You mentioned, \"My favorite pet is a terrier. I saw a cute one on Twitter.\""
+]

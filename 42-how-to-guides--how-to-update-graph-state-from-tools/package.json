@@ -1,12 +1,10 @@
 {
-  "name": "40-how-to-guides--how-to-handle-tool-calling-errors",
+  "name": "42-how-to-guides--how-to-update-graph-state-from-tools",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "basic": "node -r ts-node/register --env-file=.env  src/1-basic.ts",
-    "custom-strategies": "node -r ts-node/register --env-file=.env  src/2-custom-strategies.ts",
-    "fallback-agent": "node -r ts-node/register --env-file=.env  src/3-fallback-agent.ts"
+    "index": "node -r ts-node/register --env-file=.env  src/index.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,12 +1,11 @@
 {
-  "name": "40-how-to-guides--how-to-handle-tool-calling-errors",
+  "name": "41-how-to-guides--how-to-pass-runtime-values-to-tools",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "basic": "node -r ts-node/register --env-file=.env  src/1-basic.ts",
-    "custom-strategies": "node -r ts-node/register --env-file=.env  src/2-custom-strategies.ts",
-    "fallback-agent": "node -r ts-node/register --env-file=.env  src/3-fallback-agent.ts"
+    "closure": "node -r ts-node/register --env-file=.env  src/2-closure.ts"
   },
   "keywords": [],
   "author": "",

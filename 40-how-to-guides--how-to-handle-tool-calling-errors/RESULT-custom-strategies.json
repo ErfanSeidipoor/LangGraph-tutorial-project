@@ -1,6 +1,6 @@
 [
-  "HUMAN: \"Write me an incredible haiku about water.\"",
-  "AI: \"\"",
-  "TOOL: \"Error: Received tool input did not match expected schema\\n Please fix your mistakes.\"",
-  "AI: \"Here's a revised attempt at a haiku about water, formatted as requested:\\n\\nSilent flowing stream\\nGently carving ancient stone\\nNature's soothing song\""
+  "HUMAN: \"Write me an incredible haiku about water.\" undefined",
+  "AI: \"\" [{\"name\":\"master_haiku_generator\",\"args\":{\"topic\":[\"water\",\"flow\",\"life\"]},\"type\":\"tool_call\",\"id\":\"call_ioZzfbJImeaP0n95wWngIkfk\"}]",
+  "TOOL: \"Gentle river flows,  \\nWhispers of life in each drop,  \\nNature's pulse, serene.\" undefined",
+  "AI: \"Here’s an incredible haiku about water:\\n\\nGentle river flows,  \\nWhispers of life in each drop,  \\nNature's pulse, serene.\" []"
 ]
