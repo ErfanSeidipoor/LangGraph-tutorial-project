@@ -1,0 +1,38 @@
+[
+  [
+    [],
+    {
+      "node1": {
+        "foo": "hi! foo"
+      }
+    }
+  ],
+  [
+    [
+      "node2:d6cfb922-9ccd-5c95-b518-f7302627bf0e"
+    ],
+    {
+      "subgraphNode1": {
+        "bar": "bar"
+      }
+    }
+  ],
+  [
+    [
+      "node2:d6cfb922-9ccd-5c95-b518-f7302627bf0e"
+    ],
+    {
+      "subgraphNode2": {
+        "foo": "hi! foobar"
+      }
+    }
+  ],
+  [
+    [],
+    {
+      "node2": {
+        "foo": "hi! foobar"
+      }
+    }
+  ]
+]
