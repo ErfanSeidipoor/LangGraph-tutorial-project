@@ -1,0 +1,584 @@
+[
+  {
+    "city": "San Francisco"
+  },
+  [
+    {
+      "configurable": {
+        "thread_id": "1"
+      }
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi!"
+        }
+      ]
+    }
+  ],
+  {
+    "routerNode": {
+      "route": "other"
+    }
+  },
+  {
+    "normalLLMNode": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "Hello! How can I assist you today?",
+            "additional_kwargs": {},
+            "response_metadata": {
+              "tokenUsage": {
+                "promptTokens": 9,
+                "completionTokens": 10,
+                "totalTokens": 19
+              },
+              "finish_reason": "stop",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "usage": {
+                "prompt_tokens": 9,
+                "completion_tokens": 10,
+                "total_tokens": 19,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "system_fingerprint": "fp_b376dfbbd5"
+            },
+            "id": "chatcmpl-BICCxlnmiZPQAkaiu6PxG6oipgm3P",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "output_tokens": 10,
+              "input_tokens": 9,
+              "total_tokens": 19,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  [
+    {
+      "configurable": {
+        "thread_id": "2"
+      }
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "what's the weather in sf"
+        }
+      ]
+    }
+  ],
+  {
+    "routerNode": {
+      "route": "weather"
+    }
+  },
+  {
+    "__interrupt__": []
+  },
+  [
+    {
+      "configurable": {
+        "thread_id": "3"
+      },
+      "streamMode": "updates",
+      "subgraphs": true
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "what's the weather in sf"
+        }
+      ]
+    }
+  ],
+  [
+    [],
+    {
+      "routerNode": {
+        "route": "weather"
+      }
+    }
+  ],
+  [
+    [
+      "weatherGraph:dad768d4-9d95-5ec7-bdc1-b7310e499068"
+    ],
+    {
+      "modelNode": {
+        "city": "San Francisco"
+      }
+    }
+  ],
+  [
+    [],
+    {
+      "__interrupt__": []
+    }
+  ],
+  [
+    [],
+    {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "what's the weather in sf",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "f0bfd792-d435-4a30-ad02-48862c61d9a8"
+          }
+        }
+      ],
+      "route": "weather"
+    }
+  ],
+  [
+    [
+      "weatherGraph:dad768d4-9d95-5ec7-bdc1-b7310e499068"
+    ],
+    {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "what's the weather in sf",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "f0bfd792-d435-4a30-ad02-48862c61d9a8"
+          }
+        }
+      ],
+      "city": "San Francisco"
+    }
+  ],
+  [
+    [
+      "weatherGraph:dad768d4-9d95-5ec7-bdc1-b7310e499068"
+    ],
+    {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "what's the weather in sf",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "f0bfd792-d435-4a30-ad02-48862c61d9a8"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "It's sunny in San Francisco",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "192d4719-112b-4916-a1a9-eef0a5b4e9d5"
+          }
+        }
+      ],
+      "city": "San Francisco"
+    }
+  ],
+  [
+    [],
+    {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "what's the weather in sf",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "f0bfd792-d435-4a30-ad02-48862c61d9a8"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "It's sunny in San Francisco",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "192d4719-112b-4916-a1a9-eef0a5b4e9d5"
+          }
+        }
+      ],
+      "route": "weather"
+    }
+  ],
+  [
+    {
+      "configurable": {
+        "thread_id": "4"
+      },
+      "streamMode": "updates",
+      "subgraphs": true
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "what's the weather in sf"
+        }
+      ]
+    }
+  ],
+  [
+    [],
+    {
+      "routerNode": {
+        "route": "weather"
+      }
+    }
+  ],
+  [
+    [
+      "weatherGraph:cb9b8fb2-0675-523d-bfee-72bec58e9035"
+    ],
+    {
+      "modelNode": {
+        "city": "San Francisco"
+      }
+    }
+  ],
+  [
+    [],
+    {
+      "__interrupt__": []
+    }
+  ],
+  [
+    {
+      "values": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "what's the weather in sf",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "61b1f84e-c9c4-41b4-8d64-fd2fcd0523b7"
+            }
+          }
+        ],
+        "city": "San Francisco"
+      },
+      "next": [
+        "weatherNode"
+      ],
+      "tasks": [
+        {
+          "id": "5b065fab-87c9-58b2-a337-5a813de5643a",
+          "name": "weatherNode",
+          "path": [
+            "__pregel_pull",
+            "weatherNode"
+          ],
+          "interrupts": []
+        }
+      ],
+      "metadata": {
+        "source": "loop",
+        "writes": {
+          "modelNode": {
+            "city": "San Francisco"
+          }
+        },
+        "step": 1,
+        "parents": {
+          "": "1f010776-329c-65c0-8001-f93ef220e7ed"
+        }
+      },
+      "config": {
+        "configurable": {
+          "thread_id": "4",
+          "checkpoint_id": "1f010776-3b42-6b70-8001-38ca37ded5a4",
+          "checkpoint_ns": "weatherGraph:cb9b8fb2-0675-523d-bfee-72bec58e9035",
+          "checkpoint_map": {
+            "": "1f010776-329c-65c0-8001-f93ef220e7ed",
+            "weatherGraph:cb9b8fb2-0675-523d-bfee-72bec58e9035": "1f010776-3b42-6b70-8001-38ca37ded5a4"
+          }
+        }
+      },
+      "createdAt": "2025-04-03T10:35:40.839Z",
+      "parentConfig": {
+        "configurable": {
+          "thread_id": "4",
+          "checkpoint_ns": "weatherGraph:cb9b8fb2-0675-523d-bfee-72bec58e9035",
+          "checkpoint_id": "1f010776-32a6-6200-8000-a15e510db9c9"
+        }
+      }
+    }
+  ],
+  [
+    [
+      "weatherGraph:cb9b8fb2-0675-523d-bfee-72bec58e9035"
+    ],
+    {
+      "weatherNode": {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "It's sunny in la"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    [],
+    {
+      "weatherGraph": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "what's the weather in sf",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "61b1f84e-c9c4-41b4-8d64-fd2fcd0523b7"
+            }
+          },
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "AIMessage"
+            ],
+            "kwargs": {
+              "content": "It's sunny in la",
+              "tool_calls": [],
+              "invalid_tool_calls": [],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "e8f5f50f-0760-436e-b593-a6206b9ceb99"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "configurable": {
+        "thread_id": "5"
+      }
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "What's the weather in sf"
+        }
+      ]
+    }
+  ],
+  {
+    "routerNode": {
+      "route": "weather"
+    }
+  },
+  {
+    "__interrupt__": []
+  },
+  [
+    [],
+    {
+      "weatherGraph": {
+        "messages": [
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "HumanMessage"
+            ],
+            "kwargs": {
+              "content": "What's the weather in sf",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "115f46d3-a4a8-44ac-bb83-20dd26082d86"
+            }
+          },
+          {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+              "langchain_core",
+              "messages",
+              "AIMessage"
+            ],
+            "kwargs": {
+              "content": "rainy",
+              "tool_calls": [],
+              "invalid_tool_calls": [],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "id": "cde81280-3cd6-4b47-87de-9a60bd03f28c"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "configurable": {
+        "thread_id": "6"
+      }
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "what's the weather in sf"
+        }
+      ]
+    }
+  ],
+  [
+    [],
+    {
+      "routerNode": {
+        "route": "weather"
+      }
+    }
+  ],
+  [
+    [
+      "weatherGraph:9c661d2d-a0ea-543c-bb51-8c03e8686d79"
+    ],
+    {
+      "modelNode": {
+        "city": "San Francisco"
+      }
+    }
+  ],
+  [
+    [],
+    {
+      "__interrupt__": []
+    }
+  ],
+  [
+    [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "what's the weather in sf",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "a71998de-7c39-450d-8650-ad28b7777228"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "rainy",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "32e1d987-a321-496a-8e70-740cb14d4a07"
+        }
+      }
+    ]
+  ]
+]
