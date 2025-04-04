@@ -1,0 +1,17 @@
+[
+  "what is the weather in SF?",
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "San Francisco, CA"
+      },
+      "type": "tool_call",
+      "id": "call_hXNVO1B5sQlF9fmTbvB5evgT"
+    }
+  ],
+  "It's 60 degrees and foggy.",
+  "The weather in San Francisco is currently 60 degrees and foggy.",
+  "who built you?",
+  "I was developed by OpenAI, a research organization focused on creating and promoting friendly AI technology."
+]

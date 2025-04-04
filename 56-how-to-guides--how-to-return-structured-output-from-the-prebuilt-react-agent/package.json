@@ -1,5 +1,5 @@
 {
-  "name": "45-how-to-guides--how-to-transform-inputs-and-outputs-of-a-subgraph",
+  "name": "56-how-to-guides--how-to-return-structured-output-from-the-prebuilt-react-agent",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@langchain/anthropic": "^0.3.16",
     "@langchain/cohere": "^0.3.1",
     "@langchain/community": "^0.3.19",
     "@langchain/core": "0.3.13",

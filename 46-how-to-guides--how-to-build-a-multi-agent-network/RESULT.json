@@ -1,0 +1,74 @@
+[
+  {
+    "wood": 10,
+    "food": 3,
+    "gold": 10,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 8,
+    "food": 3,
+    "gold": 11,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 6,
+    "food": 3,
+    "gold": 12,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 4,
+    "food": 3,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 7,
+    "food": 3,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 10,
+    "food": 3,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 13,
+    "food": 3,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 13,
+    "food": 2,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 13,
+    "food": 1,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 13,
+    "food": 0,
+    "gold": 13,
+    "guardOnDuty": true
+  },
+  {
+    "wood": 13,
+    "food": 0,
+    "gold": 13,
+    "guardOnDuty": false
+  },
+  {
+    "wood": 13,
+    "food": 0,
+    "gold": 0,
+    "guardOnDuty": false
+  }
+]

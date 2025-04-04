@@ -1,0 +1,19 @@
+[
+  "what is the weather in NYC?",
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "nyc"
+      },
+      "type": "tool_call",
+      "id": "call_JOIuJI09v7dtRngmBRgVZ589"
+    }
+  ],
+  "It might be cloudy in nyc",
+  "The current weather in NYC is likely cloudy.",
+  "What's it known for?",
+  "New York City (NYC) is known for many things, including:\n\n1. **Iconic Landmarks**: NYC is home to world-famous landmarks such as the Statue of Liberty, Times Square, Central Park, and the Empire State Building.\n\n2. **Cultural Diversity**: The city is a cultural melting pot, with a diverse population representing virtually every nationality and ethnicity.\n\n3. **Broadway and the Arts**: NYC is renowned for its vibrant arts scene, particularly Broadway, where some of the world's best theater productions take place.\n\n4. **Financial Hub**: It is a major global financial center, with Wall Street and the New York Stock Exchange at the heart of its economic district.\n\n5. **Food Scene**: The city boasts a rich culinary scene, offering everything from street food to high-end dining, and is famous for its bagels, pizza, and diverse international cuisines.\n\n6. **Museums and Galleries**: NYC hosts some of the world's finest museums, including the Metropolitan Museum of Art, the Museum of Modern Art (MoMA), and the American Museum of Natural History.\n\n7. **Fashion and Shopping**: As a fashion capital, NYC is a hub for shopping with iconic locations like Fifth Avenue, Soho, and the Garment District.\n\n8. **Media and Publishing**: It is a major center for the media industry, home to numerous publications, television networks, and publishers.\n\n9. **Sports**: NYC has a rich sports culture, with major league teams like the New York Yankees, New York Mets, New York Knicks, and New York Rangers.\n\n10. **Unique Neighborhoods**: Each neighborhood in NYC has its distinct character and charm, from the historic streets of Harlem to the trendy areas of Williamsburg and Greenwich Village. \n\nOverall, NYC is known for its energy, diversity, and as a city that never sleeps.",
+  "how close is it to boston?",
+  "Could you please specify what \"it\" refers to, so I can provide the appropriate distance to Boston?"
+]

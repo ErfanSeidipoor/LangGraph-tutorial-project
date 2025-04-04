@@ -1,5 +1,5 @@
 {
-  "name": "45-how-to-guides--how-to-transform-inputs-and-outputs-of-a-subgraph",
+  "name": "49-how-to-guides--how-to-add-node-retry-policies",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@langchain/anthropic": "^0.3.16",
     "@langchain/cohere": "^0.3.1",
     "@langchain/community": "^0.3.19",
     "@langchain/core": "0.3.13",
@@ -19,6 +20,8 @@
     "@langchain/ollama": "^0.1.1",
     "@langchain/openai": "^0.3.16",
     "@langchain/textsplitters": "^0.1.0",
+    "@types/better-sqlite3": "^7.6.12",
+    "better-sqlite3": "^11.9.1",
     "canvas": "^3.1.0",
     "cheerio": "^1.0.0",
     "langchain": "^0.3.7",

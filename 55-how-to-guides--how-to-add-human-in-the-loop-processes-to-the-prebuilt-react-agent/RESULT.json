@@ -1,0 +1,138 @@
+[
+  "what is the weather in SF california?",
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "HumanMessage"
+    ],
+    "kwargs": {
+      "content": "what is the weather in SF california?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5b84d209-7864-4550-86d1-7004eec82d0f"
+    }
+  },
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "SF, California"
+      },
+      "type": "tool_call",
+      "id": "call_PjqFZGuJSIiX8PWjbkPCIRbr"
+    }
+  ],
+  {
+    "lc": 1,
+    "type": "constructor",
+    "id": [
+      "langchain_core",
+      "messages",
+      "AIMessage"
+    ],
+    "kwargs": {
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_PjqFZGuJSIiX8PWjbkPCIRbr",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"location\":\"SF, California\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 64,
+          "completionTokens": 17,
+          "totalTokens": 81
+        },
+        "finish_reason": "tool_calls",
+        "model_name": "gpt-4o-2024-08-06",
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 17,
+          "total_tokens": 81,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_898ac29719"
+      },
+      "id": "chatcmpl-BIecIZZjoYuFSrSXj1RnsyRZ9OyTA",
+      "tool_calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "location": "SF, California"
+          },
+          "type": "tool_call",
+          "id": "call_PjqFZGuJSIiX8PWjbkPCIRbr"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 64,
+        "total_tokens": 81,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  [
+    "tools"
+  ],
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "SF, California"
+      },
+      "type": "tool_call",
+      "id": "call_PjqFZGuJSIiX8PWjbkPCIRbr"
+    }
+  ],
+  "Error: Unknown Location\n Please fix your mistakes.",
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "San Francisco, California"
+      },
+      "type": "tool_call",
+      "id": "call_gevx2DKUeUj9stCIVR9Dh8NS"
+    }
+  ],
+  [
+    {
+      "name": "get_weather",
+      "args": {
+        "location": "San Francisco"
+      },
+      "type": "tool_call",
+      "id": "call_gevx2DKUeUj9stCIVR9Dh8NS"
+    }
+  ],
+  "It's always sunny in sf",
+  "The weather in San Francisco is currently sunny."
+]

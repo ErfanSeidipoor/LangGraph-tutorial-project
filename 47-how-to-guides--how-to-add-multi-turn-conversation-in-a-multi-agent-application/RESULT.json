@@ -1,0 +1,76 @@
+[
+  {
+    "iter": 1,
+    "userInput": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "i wanna go somewhere warm in the caribbean"
+        }
+      ]
+    }
+  },
+  {
+    "iter": 1,
+    "aiMessage": {
+      "name": "travelAdvisor",
+      "content": "The Caribbean is a fantastic choice for warm weather and beautiful beaches. Some popular destinations include Jamaica, the Dominican Republic, and the Bahamas. Each offers a unique blend of culture, cuisine, and activities. If you need more specific recommendations on sightseeing or accommodations, let me know!"
+    }
+  },
+  {
+    "iter": 2,
+    "userInput": {
+      "resume": "could you recommend a nice hotel in one of the areas and tell me which area it is.",
+      "goto": []
+    }
+  },
+  {
+    "iter": 2,
+    "aiMessage": {
+      "name": "travelAdvisor",
+      "content": "The Caribbean is a fantastic choice for warm weather and beautiful beaches. Some popular destinations include Jamaica, the Dominican Republic, and the Bahamas. Each offers a unique blend of culture, cuisine, and activities. If you need more specific recommendations on sightseeing or accommodations, let me know!"
+    }
+  },
+  {
+    "iter": 2,
+    "aiMessage": {
+      "name": "travelAdvisor",
+      "content": "I'll find a nice hotel for you in a popular Caribbean destination."
+    }
+  },
+  {
+    "iter": 2,
+    "aiMessage": {
+      "name": "hotelAdvisor",
+      "content": "For a luxurious stay in the Caribbean, consider the \"Sandals Royal Caribbean Resort and Private Island\" located in Montego Bay, Jamaica. This resort offers an all-inclusive experience with beautiful beachfront views, overwater bungalows, and a private island. Montego Bay is known for its vibrant culture, stunning beaches, and exciting nightlife, making it a perfect destination for a warm getaway."
+    }
+  },
+  {
+    "iter": 3,
+    "userInput": {
+      "resume": "could you recommend something to do near the hotel?",
+      "goto": []
+    }
+  },
+  {
+    "iter": 3,
+    "aiMessage": {
+      "name": "hotelAdvisor",
+      "content": "For a luxurious stay in the Caribbean, consider the \"Sandals Royal Caribbean Resort and Private Island\" located in Montego Bay, Jamaica. This resort offers an all-inclusive experience with beautiful beachfront views, overwater bungalows, and a private island. Montego Bay is known for its vibrant culture, stunning beaches, and exciting nightlife, making it a perfect destination for a warm getaway."
+    }
+  },
+  {
+    "iter": 3,
+    "aiMessage": {
+      "name": "hotelAdvisor",
+      "content": "I'll find some exciting activities or sights near the Sandals Royal Caribbean Resort in Montego Bay, Jamaica."
+    }
+  },
+  {
+    "iter": 3,
+    "aiMessage": {
+      "name": "sightseeingAdvisor",
+      "content": "Near the Sandals Royal Caribbean Resort in Montego Bay, you can explore the famous Dunn's River Falls, a stunning waterfall where you can climb the natural steps and enjoy the refreshing water. Another great activity is a visit to the Rose Hall Great House, a historic plantation house with a fascinating history and beautiful views. For a more relaxed day, you can enjoy snorkeling or a catamaran cruise in the crystal-clear waters of the Caribbean Sea. These activities offer a mix of adventure, history, and relaxation, perfect for enhancing your stay in Jamaica."
+    }
+  }
+]

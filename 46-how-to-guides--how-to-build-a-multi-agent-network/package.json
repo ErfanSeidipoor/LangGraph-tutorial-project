@@ -1,10 +1,11 @@
 {
-  "name": "45-how-to-guides--how-to-transform-inputs-and-outputs-of-a-subgraph",
+  "name": "46-how-to-guides--how-to-build-a-multi-agent-network",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "index": "node -r ts-node/register --env-file=.env  src/index.ts"
+    "basic": "node -r ts-node/register --env-file=.env  src/1-basic.ts",
+    "npc": "node -r ts-node/register --env-file=.env  src/2-npc.ts"
   },
   "keywords": [],
   "author": "",

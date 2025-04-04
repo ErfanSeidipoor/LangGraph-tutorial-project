@@ -1,0 +1,27 @@
+[
+  "Could you remind me of my email??",
+  "Could you remind me of my email??",
+  "Your email is jod@langchain.ai.",
+  "Could you remind me of my email??",
+  "Could you remind me of my email??",
+  "Your email is jad@langchain.ai. If there's anything else you need help with, feel free to ask!",
+  {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "Echo!",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "4f6aad92-0f96-4fe8-b8b9-d7f185f3b51d"
+        }
+      }
+    ]
+  }
+]
